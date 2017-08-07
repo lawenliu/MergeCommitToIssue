@@ -1,0 +1,9 @@
+C:\Users\wliu37\Documents\GitHub\MergeCommitToIssue\MergeCommitToIssue\bin\Debug\MergeCommitToIssue.exe.config
+C:\Users\wliu37\Documents\GitHub\MergeCommitToIssue\MergeCommitToIssue\bin\Debug\MergeCommitToIssue.exe
+C:\Users\wliu37\Documents\GitHub\MergeCommitToIssue\MergeCommitToIssue\bin\Debug\MergeCommitToIssue.pdb
+C:\Users\wliu37\Documents\GitHub\MergeCommitToIssue\MergeCommitToIssue\obj\Debug\MergeCommitToIssue.csprojResolveAssemblyReference.cache
+C:\Users\wliu37\Documents\GitHub\MergeCommitToIssue\MergeCommitToIssue\obj\Debug\MergeCommitToIssue.MergeMain.resources
+C:\Users\wliu37\Documents\GitHub\MergeCommitToIssue\MergeCommitToIssue\obj\Debug\MergeCommitToIssue.Properties.Resources.resources
+C:\Users\wliu37\Documents\GitHub\MergeCommitToIssue\MergeCommitToIssue\obj\Debug\MergeCommitToIssue.csproj.GenerateResource.Cache
+C:\Users\wliu37\Documents\GitHub\MergeCommitToIssue\MergeCommitToIssue\obj\Debug\MergeCommitToIssue.exe
+C:\Users\wliu37\Documents\GitHub\MergeCommitToIssue\MergeCommitToIssue\obj\Debug\MergeCommitToIssue.pdb
