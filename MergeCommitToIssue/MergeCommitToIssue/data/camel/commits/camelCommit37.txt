@@ -1,0 +1,2215 @@
+time:
+2007-03-28T14:28:07Z
+class:
+comments:
+Adding an itest module
+
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@523343 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-27T21:03:50Z
+class:
+camel-core/src/main/java/org/apache/camel/component/pojo/PojoEndpointResolver.java
+camel-core/src/main/java/org/apache/camel/component/pojo/PollingPojoComponent.java
+camel-core/src/main/java/org/apache/camel/component/pojo/PollingSchedule.java
+camel-core/src/main/java/org/apache/camel/component/pojo/timer/TimerComponent.java
+camel-core/src/main/java/org/apache/camel/component/pojo/timer/TimerConsumer.java
+camel-core/src/main/java/org/apache/camel/component/pojo/timer/TimerEndpoint.java
+camel-core/src/main/java/org/apache/camel/component/pojo/timer/TimerEndpointResolver.java
+camel-core/src/main/java/org/apache/camel/component/queue/QueueEndpointResolver.java
+camel-core/src/main/java/org/apache/camel/util/URISupport.java
+camel-core/src/test/java/org/apache/camel/component/pojo/timer/TimerRouteTest.java
+comments:
+Refactor of the PollingPojoComponent.
+
+
+
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@523078 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-27T19:29:28Z
+class:
+camel-core/src/main/java/org/apache/camel/component/pojo/PojoComponent.java
+camel-core/src/main/java/org/apache/camel/component/pojo/PojoConsumer.java
+camel-core/src/main/java/org/apache/camel/component/pojo/PojoEndpoint.java
+camel-core/src/main/java/org/apache/camel/component/pojo/PojoEndpointResolver.java
+camel-core/src/main/java/org/apache/camel/component/pojo/PollingPojoComponent.java
+camel-core/src/main/java/org/apache/camel/component/pojo/PollingPojoEndpoint.java
+camel-core/src/test/java/org/apache/camel/component/pojo/PojoRouteTest.java
+comments:
+Updated the Pojo component to take advantage of the consumer/producer stuff.
+I think the testcase is now more clear of how things work.
+
+
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@523047 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-27T17:48:15Z
+class:
+camel-mina/src/main/java/org/apache/camel/component/mina/MinaComponent.java
+camel-mina/src/main/java/org/apache/camel/component/mina/MinaConsumer.java
+camel-mina/src/main/java/org/apache/camel/component/mina/MinaEndpoint.java
+camel-mina/src/main/java/org/apache/camel/component/mina/MinaProducer.java
+comments:
+fixed the TCP test case
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@523016 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-27T17:33:50Z
+class:
+camel-core/src/main/java/org/apache/camel/builder/ExpressionBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/PredicateBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/ValueBuilder.java
+camel-core/src/test/java/org/apache/camel/builder/ExpressionBuilderTest.java
+camel-core/src/test/java/org/apache/camel/builder/PredicateBuilderTest.java
+comments:
+added some regular expression expressions & predicates with test cases
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@523008 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-27T17:33:05Z
+class:
+comments:
+added some example wsdl files for the cxf transport
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@523007 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-27T17:00:15Z
+class:
+comments:
+Adding to svn ignore
+
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@522995 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-27T16:25:18Z
+class:
+comments:
+Added some stuff the the svn ignore
+
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@522987 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-27T14:59:39Z
+class:
+camel-cxf/src/main/java/org/apache/camel/component/cxf/transport/CamelTransport.java
+comments:
+zapped cruft
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@522939 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-27T14:46:48Z
+class:
+camel-core/src/main/java/org/apache/camel/impl/DefaultCamelContext.java
+camel-cxf/src/main/java/org/apache/camel/component/cxf/CxfBinding.java
+camel-cxf/src/main/java/org/apache/camel/component/cxf/CxfComponent.java
+camel-cxf/src/main/java/org/apache/camel/component/cxf/CxfEndpoint.java
+camel-cxf/src/main/java/org/apache/camel/component/cxf/CxfEndpointResolver.java
+camel-cxf/src/main/java/org/apache/camel/component/cxf/CxfExchange.java
+camel-cxf/src/main/java/org/apache/camel/component/cxf/CxfMessage.java
+camel-cxf/src/main/java/org/apache/camel/component/cxf/transport/CamelConduit.java
+camel-cxf/src/main/java/org/apache/camel/component/cxf/transport/CamelConstants.java
+camel-cxf/src/main/java/org/apache/camel/component/cxf/transport/CamelDestination.java
+camel-cxf/src/main/java/org/apache/camel/component/cxf/transport/CamelTransportBase.java
+camel-cxf/src/test/java/org/apache/camel/component/cxf/transport/CamelConduitTest.java
+camel-cxf/src/test/java/org/apache/camel/component/cxf/transport/CamelDestinationTest.java
+camel-cxf/src/test/java/org/apache/camel/component/cxf/transport/CamelTestSupport.java
+comments:
+added some (currently failing) test cases for the CXF transport
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@522936 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-27T13:41:09Z
+class:
+camel-cxf/src/main/java/org/apache/camel/component/cxf/transport/CamelConduit.java
+camel-cxf/src/main/java/org/apache/camel/component/cxf/transport/CamelConstants.java
+camel-cxf/src/main/java/org/apache/camel/component/cxf/transport/CamelDestination.java
+camel-cxf/src/main/java/org/apache/camel/component/cxf/transport/CamelTransport.java
+camel-cxf/src/main/java/org/apache/camel/component/cxf/transport/CamelTransportBase.java
+camel-cxf/src/main/java/org/apache/camel/component/cxf/transport/CamelTransportFactory.java
+comments:
+a rough initial spike attempting to port the JMS transport for CXF to Camel
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@522906 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-27T13:40:30Z
+class:
+comments:
+disabled test cases until we can find a freely distributable jar for Java 5
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@522905 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-27T13:39:53Z
+class:
+camel-core/src/main/java/org/apache/camel/util/CamelClient.java
+comments:
+added a helper client class for working with a number of different endpoints
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@522904 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-27T12:01:51Z
+class:
+comments:
+updated to latest versions
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@522878 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-27T09:37:16Z
+class:
+camel-jbi/src/main/java/org/apache/camel/component/jbi/JbiEndpoint.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/ToJbiProcessor.java
+comments:
+added a bit more debugging until I can figure out how to fix the test case :)
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@522843 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-27T09:30:52Z
+class:
+camel-core/src/main/java/org/apache/camel/CamelContext.java
+camel-core/src/main/java/org/apache/camel/Consumer.java
+camel-core/src/main/java/org/apache/camel/Endpoint.java
+camel-core/src/main/java/org/apache/camel/EndpointResolver.java
+camel-core/src/main/java/org/apache/camel/FailedToCreateProducerException.java
+camel-core/src/main/java/org/apache/camel/Producer.java
+camel-core/src/main/java/org/apache/camel/Service.java
+camel-core/src/main/java/org/apache/camel/builder/BuilderSupport.java
+camel-core/src/main/java/org/apache/camel/builder/ChoiceBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/DeadLetterChannelBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/ErrorHandlerBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/FilterBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/FromBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/InterceptorBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/MulticastBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/PipelineBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/ProcessorFactory.java
+camel-core/src/main/java/org/apache/camel/builder/RouteBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/SplitterBuilder.java
+camel-core/src/main/java/org/apache/camel/component/pojo/PojoConsumer.java
+camel-core/src/main/java/org/apache/camel/component/pojo/PojoEndpoint.java
+camel-core/src/main/java/org/apache/camel/component/queue/QueueEndpoint.java
+camel-core/src/main/java/org/apache/camel/component/queue/QueueEndpointConsumer.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultCamelContext.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultConsumer.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultEndpoint.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultEndpointResolver.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultProducer.java
+camel-core/src/main/java/org/apache/camel/impl/ServiceSupport.java
+camel-core/src/main/java/org/apache/camel/processor/CompositeProcessor.java
+camel-core/src/main/java/org/apache/camel/processor/DeadLetterChannel.java
+camel-core/src/main/java/org/apache/camel/processor/FilterProcessor.java
+camel-core/src/main/java/org/apache/camel/processor/InterceptorProcessor.java
+camel-core/src/main/java/org/apache/camel/processor/LoggingErrorHandler.java
+camel-core/src/main/java/org/apache/camel/processor/LoggingLevel.java
+camel-core/src/main/java/org/apache/camel/processor/MulticastProcessor.java
+camel-core/src/main/java/org/apache/camel/processor/Pipeline.java
+camel-core/src/main/java/org/apache/camel/processor/RecipientList.java
+camel-core/src/main/java/org/apache/camel/processor/RedeliveryPolicy.java
+camel-core/src/main/java/org/apache/camel/processor/SendProcessor.java
+camel-core/src/main/java/org/apache/camel/processor/Splitter.java
+camel-core/src/main/java/org/apache/camel/util/ProducerCache.java
+camel-core/src/main/java/org/apache/camel/util/ServiceHelper.java
+camel-core/src/test/java/org/apache/camel/component/pojo/PojoRouteTest.java
+camel-core/src/test/java/org/apache/camel/component/queue/QueueRouteTest.java
+camel-cxf/src/main/java/org/apache/camel/component/cxf/CxfComponent.java
+camel-cxf/src/main/java/org/apache/camel/component/cxf/CxfEndpoint.java
+camel-http/src/main/java/org/apache/camel/component/http/CamelServlet.java
+camel-http/src/main/java/org/apache/camel/component/http/HttpEndpoint.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/CamelJbiComponent.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/CamelJbiEndpoint.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/JbiEndpoint.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/ToJbiProcessor.java
+camel-jbi/src/test/java/org/apache/camel/component/jbi/JbiTestSupport.java
+camel-jms/src/main/java/org/apache/camel/component/jms/EndpointMessageListener.java
+camel-jms/src/main/java/org/apache/camel/component/jms/JmsComponent.java
+camel-jms/src/main/java/org/apache/camel/component/jms/JmsConsumer.java
+camel-jms/src/main/java/org/apache/camel/component/jms/JmsEndpoint.java
+camel-jms/src/main/java/org/apache/camel/component/jms/JmsProducer.java
+camel-jms/src/test/java/org/apache/camel/component/jms/JmsRouteTest.java
+camel-mina/src/main/java/org/apache/camel/component/mina/MinaConsumer.java
+camel-mina/src/main/java/org/apache/camel/component/mina/MinaEndpoint.java
+camel-mina/src/main/java/org/apache/camel/component/mina/MinaProducer.java
+camel-mina/src/test/java/org/apache/camel/component/mina/MinaVmTest.java
+camel-spring/src/main/java/org/apache/camel/spring/CamelContextFactoryBean.java
+comments:
+added a lifecycle interface (Service) and added a Producer and Consumer interfaces for actually communicating with an endpoint (so that you can add multiple consumers, or deal with resource specific stuff like JDBC connections etc)
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@522838 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-26T20:09:26Z
+class:
+comments:
+upgrade the livetribe-jsr223 version
+
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@522611 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-26T16:47:22Z
+class:
+camel-script/src/test/java/org/apache/camel/builder/script/Jsr223Test.java
+comments:
+Use the latest version of the 223 engine for groovy
+
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@522570 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-26T16:34:55Z
+class:
+comments:
+tweak mvn eclipse conifg
+
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@522565 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-26T15:18:34Z
+class:
+camel-jbi/src/main/java/org/apache/camel/component/jbi/CamelJbiComponent.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/JbiEndpoint.java
+camel-jbi/src/test/java/org/apache/camel/component/jbi/JbiTestSupport.java
+camel-jbi/src/test/java/org/apache/camel/component/jbi/SendFromCamelToJbiThenRouteToAnotherJbiComponentTest.java
+comments:
+Fix jbi test cases.
+
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@522542 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-26T14:54:14Z
+class:
+camel-core/src/test/java/org/apache/camel/builder/xpath/XPathTest.java
+comments:
+removed cruft
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@522533 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-26T14:02:25Z
+class:
+camel-jbi/src/main/java/org/apache/camel/component/jbi/CamelJbiComponent.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/CamelJbiEndpoint.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/FromJbiProcessor.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/JbiBinding.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/JbiEndpoint.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/JbiException.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/JbiExchange.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/JbiMessage.java
+camel-jbi/src/test/java/org/apache/camel/component/jbi/JbiTestSupport.java
+camel-jbi/src/test/java/org/apache/camel/component/jbi/SendFromCamelToJbiAndBackToCamelTest.java
+camel-jbi/src/test/java/org/apache/camel/component/jbi/SendFromCamelToJbiTest.java
+camel-jbi/src/test/java/org/apache/camel/component/jbi/SendFromCamelToJbiThenRouteToAnotherJbiComponentTest.java
+comments:
+reorganised imports and added a test case for Camel rules automatically activating JBI endpoints
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@522517 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-26T12:58:19Z
+class:
+comments:
+tidied javadoc
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@522505 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-26T12:49:29Z
+class:
+camel-core/src/main/java/org/apache/camel/builder/RouteBuilder.java
+comments:
+updated javadoc
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@522502 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-26T12:41:44Z
+class:
+camel-jbi/src/main/java/org/apache/camel/component/jbi/JbiBinding.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/ToJbiProcessor2.java
+comments:
+removed some cruft
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@522500 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-26T12:31:49Z
+class:
+camel-core/src/main/java/org/apache/camel/Component.java
+camel-core/src/main/java/org/apache/camel/component/pojo/PojoComponent.java
+camel-core/src/main/java/org/apache/camel/component/pojo/PojoEndpoint.java
+camel-core/src/main/java/org/apache/camel/component/pojo/PojoEndpointResolver.java
+camel-core/src/main/java/org/apache/camel/component/queue/QueueComponent.java
+camel-core/src/main/java/org/apache/camel/component/queue/QueueEndpoint.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultCamelContext.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultComponent.java
+camel-core/src/test/java/org/apache/camel/component/pojo/PojoRouteTest.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/CamelJbiComponent.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/CamelJbiEndpoint.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/JbiBinding.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/JbiEndpoint.java
+camel-jbi/src/test/java/org/apache/camel/component/jbi/JbiTestSupport.java
+camel-jbi/src/test/java/org/apache/camel/component/jbi/SendFromCamelToJbiAndBackToCamelTest.java
+camel-jbi/src/test/java/org/apache/camel/component/jbi/SendFromCamelToJbiTest.java
+comments:
+got the JBI test cases working for invoking a JBI component from Camel and invoking a camel endpoint from inside JBI; also a minor refactor to Component
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@522497 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-23T18:24:47Z
+class:
+camel-core/src/main/java/org/apache/camel/impl/DefaultCamelContext.java
+comments:
+temporarily disabled caching due to POJO test case failure
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521851 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-23T18:22:39Z
+class:
+camel-core/src/main/java/org/apache/camel/impl/DefaultCamelContext.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/JbiBinding.java
+camel-jbi/src/test/java/org/apache/camel/component/jbi/JbiTest.java
+comments:
+more tinkering on the JBI test case
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521846 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-23T17:58:36Z
+class:
+camel-core/src/main/java/org/apache/camel/CamelContext.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultCamelContext.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/CamelJbiComponent.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/CamelJbiEndpoint.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/FromJbiProcessor.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/JbiBinding.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/JbiEndpoint.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/JbiException.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/ToJbiProcessor.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/ToJbiProcessor2.java
+camel-jbi/src/test/java/org/apache/camel/component/jbi/JbiTest.java
+comments:
+a very rough first cut at a Camel <-> JBI bridge
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521831 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-23T16:46:30Z
+class:
+camel-core/src/main/java/org/apache/camel/component/pojo/PollingPojoComponent.java
+camel-core/src/main/java/org/apache/camel/component/pojo/PollingSchedule.java
+comments:
+turn PollingSchedule into a bean
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521801 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-23T16:12:16Z
+class:
+camel-core/src/main/java/org/apache/camel/component/pojo/PojoComponent.java
+camel-core/src/main/java/org/apache/camel/component/pojo/PollingPojoComponent.java
+camel-core/src/main/java/org/apache/camel/component/pojo/PollingPojoEndpoint.java
+camel-core/src/main/java/org/apache/camel/component/pojo/PollingSchedule.java
+comments:
+Add a polling component 
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521788 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-23T15:26:01Z
+class:
+camel-core/src/main/java/org/apache/camel/Route.java
+comments:
+added a little toString() method
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521761 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-23T14:50:19Z
+class:
+camel-cxf/src/main/java/org/apache/camel/component/cxf/CxfBinding.java
+camel-cxf/src/main/java/org/apache/camel/component/cxf/CxfComponent.java
+camel-cxf/src/main/java/org/apache/camel/component/cxf/CxfEndpoint.java
+camel-cxf/src/main/java/org/apache/camel/component/cxf/CxfEndpointResolver.java
+camel-cxf/src/main/java/org/apache/camel/component/cxf/CxfExchange.java
+camel-cxf/src/main/java/org/apache/camel/component/cxf/CxfMessage.java
+comments:
+added initial shell of a CXF componet
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521746 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-23T14:30:26Z
+class:
+camel-jbi/src/main/java/org/apache/camel/component/jbi/JbiExchange.java
+camel-jms/src/main/java/org/apache/camel/component/jms/JmsExchange.java
+comments:
+added helper methods
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521740 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-23T14:13:30Z
+class:
+camel-core/src/main/java/org/apache/camel/Route.java
+comments:
+adding the Route class I forgot to checkin
+
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521735 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-23T13:10:09Z
+class:
+comments:
+updated assembly to new names and including camel-cxf and camel-script in the build
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521714 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-23T12:41:04Z
+class:
+comments:
+renamed the assembly module to match the distro and jar names
+
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521704 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-23T12:15:40Z
+class:
+camel-core/src/main/java/org/apache/camel/builder/xpath/ExchangeXPathExpression.java
+camel-core/src/main/java/org/apache/camel/builder/xpath/MessageVariableResolver.java
+camel-core/src/main/java/org/apache/camel/builder/xpath/XPathBuilder.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultExchange.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultMessage.java
+camel-core/src/test/java/org/apache/camel/TestSupport.java
+camel-core/src/test/java/org/apache/camel/builder/xpath/XPathTest.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/JbiMessage.java
+camel-jms/src/main/java/org/apache/camel/component/jms/JmsMessage.java
+comments:
+simplified the XPath support so that XPathBuilder is-a Expression and Predicate, then tidied up some toString() implementations
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521692 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-23T11:36:33Z
+class:
+camel-core/src/test/java/org/apache/camel/TestSupport.java
+camel-script/src/test/java/org/apache/camel/builder/script/GroovyTest.java
+camel-script/src/test/java/org/apache/camel/builder/script/ScriptTestSupport.java
+comments:
+refactored the test cases to put more useful helper methods in TestSupport
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521678 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-23T11:20:01Z
+class:
+camel-script/src/main/java/org/apache/camel/builder/script/ScriptBuilder.java
+camel-script/src/main/java/org/apache/camel/builder/script/ScriptEvaluationException.java
+camel-script/src/test/java/org/apache/camel/builder/script/GroovyTest.java
+camel-script/src/test/java/org/apache/camel/builder/script/Jsr223Test.java
+camel-script/src/test/java/org/apache/camel/builder/script/ScriptTestSupport.java
+comments:
+added a script module for JSR 223 support; also tidied up the spring dependency pom stuff
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521675 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-23T11:16:46Z
+class:
+camel-core/src/main/java/org/apache/camel/Route.java
+camel-core/src/test/java/org/apache/camel/builder/RouteBuilderTest.java
+comments:
+added a dummy Route class to fix the compile errors and test cases
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521674 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-23T05:13:03Z
+class:
+camel-core/src/main/java/org/apache/camel/Exchange.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultExchange.java
+comments:
+Added a property map to the Route so that route metadata can be attached.
+
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521588 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-23T04:59:00Z
+class:
+camel-core/src/main/java/org/apache/camel/CamelContext.java
+camel-core/src/main/java/org/apache/camel/builder/RouteBuilder.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultCamelContext.java
+camel-core/src/test/java/org/apache/camel/builder/ErrorHandlerTest.java
+camel-core/src/test/java/org/apache/camel/builder/RouteBuilderTest.java
+camel-http/src/main/java/org/apache/camel/component/http/CamelServlet.java
+camel-spring/src/test/java/org/apache/camel/spring/CamelContextFactoryBeanTest.java
+comments:
+Added a Route class to hold a configured Endpoint -> Processor information.
+
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521586 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-22T20:54:37Z
+class:
+comments:
+Added snipplet markers and rearanged. 
+
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521456 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-22T20:19:22Z
+class:
+camel-core/src/main/java/org/apache/camel/builder/FromBuilder.java
+camel-spring/src/test/java/org/apache/camel/spring/builder/SpringRouteBuilderTest.java
+comments:
+Fixed splitter test case.  Now all test cases in RouteBuilderTest are implemented in spring XML.
+
+
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521439 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-22T20:17:39Z
+class:
+comments:
+added an assembly
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521438 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-22T20:14:38Z
+class:
+comments:
+added an assembly
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521437 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-22T20:02:04Z
+class:
+camel-core/src/main/java/org/apache/camel/RouteBuilderFinder.java
+comments:
+tidied up poms to minimise cut-n-paste of versions
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521429 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-22T20:00:17Z
+class:
+camel-jbi/src/main/java/org/apache/camel/component/jbi/CamelJbiComponent.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/CamelJbiEndpoint.java
+comments:
+update the binding
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521428 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-22T19:53:44Z
+class:
+camel-core/src/main/java/org/apache/camel/builder/FromBuilder.java
+camel-spring/src/test/java/org/apache/camel/spring/builder/SpringRouteBuilderTest.java
+comments:
+Got the dynamic receipient list example workin in spring xml
+
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521425 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-22T19:19:21Z
+class:
+camel-core/src/main/java/org/apache/camel/CamelContext.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultCamelContext.java
+camel-spring/src/main/java/org/apache/camel/spring/CamelContextFactoryBean.java
+camel-spring/src/test/java/org/apache/camel/spring/CamelContextFactoryBeanTest.java
+comments:
+Some small tweaks to CamelContextFactoryBeanTest
+
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521410 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-22T18:41:24Z
+class:
+camel-spring/src/main/java/org/apache/camel/spring/CamelNamespaceHandler.java
+camel-spring/src/main/java/org/apache/camel/spring/builder/BuilderAction.java
+camel-spring/src/main/java/org/apache/camel/spring/builder/BuilderStatement.java
+camel-spring/src/main/java/org/apache/camel/spring/builder/CamelBeanDefinitionParser.java
+camel-spring/src/main/java/org/apache/camel/spring/builder/IllegalActionException.java
+camel-spring/src/main/java/org/apache/camel/spring/builder/MethodInfo.java
+camel-spring/src/main/java/org/apache/camel/spring/builder/RouteBuilderFactory.java
+camel-spring/src/test/java/org/apache/camel/spring/builder/SpringRouteBuilderTest.java
+comments:
+Moved most of the cases from o.a.cammel.spring to o.a.camel.spring.builder
+
+
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521402 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-22T18:33:54Z
+class:
+camel-core/src/main/java/org/apache/camel/builder/ChoiceBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/FromBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/WhenBuilder.java
+camel-spring/src/main/java/org/apache/camel/spring/CamelBeanDefinitionParser.java
+camel-spring/src/test/java/org/apache/camel/spring/SpringRouteBuilderTest.java
+camel-spring/src/test/java/org/apache/camel/spring/SpringXMLExtensionTest.java
+comments:
+Added needed support for the wire tap impl.. It can now inject array values into builders.
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521399 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-22T18:02:53Z
+class:
+camel-jbi/src/main/java/org/apache/camel/component/jbi/CamelContainerBootstrap.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/CamelContainerDeployer.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/CamelEndpointComponent.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/CamelJbiComponent.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/CamelJbiEndpoint.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/CamelServiceEngine.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/CamelServiceEngineEndpoint.java
+comments:
+Use DefaultComponent
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521386 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-22T17:48:22Z
+class:
+comments:
+updated snippets
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521372 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-22T17:45:29Z
+class:
+camel-core/src/main/java/org/apache/camel/util/ObjectHelper.java
+camel-core/src/main/java/org/apache/camel/util/ResolverUtil.java
+camel-spring/src/main/java/org/apache/camel/spring/CamelContextFactoryBean.java
+camel-spring/src/main/java/org/apache/camel/spring/RouteBuilderFinder.java
+camel-spring/src/test/java/org/apache/camel/spring/SpringClassPathRouteLoaderTest.java
+camel-spring/src/test/java/org/apache/camel/spring/example/test1/MyRouteBuilder.java
+comments:
+added a Spring FactoryBean for creating and configuring a CamelContext along with auto-starting it and also being able to search the classpath for routes to be installed
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521369 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-22T17:37:38Z
+class:
+comments:
+zapped clogging's dependencies!
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521364 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-22T16:33:11Z
+class:
+camel-jbi/src/main/java/org/apache/camel/component/jbi/CamelEndpointComponent.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/CamelServiceEngineEndpoint.java
+comments:
+pass through the camelContext
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521329 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-22T16:11:26Z
+class:
+comments:
+added servicemix common jar
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521320 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-22T16:11:21Z
+class:
+camel-core/src/main/java/org/apache/camel/CamelContext.java
+camel-core/src/main/java/org/apache/camel/Endpoint.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultCamelContext.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultEndpoint.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/JbiEndpoint.java
+camel-jms/src/main/java/org/apache/camel/component/jms/JmsEndpoint.java
+camel-mina/src/main/java/org/apache/camel/component/mina/MinaComponent.java
+camel-mina/src/main/java/org/apache/camel/component/mina/MinaEndpoint.java
+camel-mina/src/main/java/org/apache/camel/component/mina/MinaEndpointResolver.java
+camel-mina/src/test/java/org/apache/camel/component/mina/MinaMulticastTest.java
+camel-mina/src/test/java/org/apache/camel/component/mina/MinaTcpTest.java
+camel-mina/src/test/java/org/apache/camel/component/mina/MinaVmTest.java
+comments:
+improved the Mina component so that it is capable of creating different connectors/acceptors using the URI; also added Exception to the activation methods
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521319 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-22T16:09:54Z
+class:
+camel-jbi/src/main/java/org/apache/camel/component/jbi/CamelContainerBootstrap.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/CamelContainerDeployer.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/CamelEndpointComponent.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/CamelServiceEngine.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/CamelServiceEngineEndpoint.java
+comments:
+Add a ServiceEngine Camel Component Container endpoint Component
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521318 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-22T14:23:34Z
+class:
+camel-http/src/main/java/org/apache/camel/component/http/CamelServlet.java
+camel-http/src/main/java/org/apache/camel/component/http/HttpBinding.java
+camel-http/src/main/java/org/apache/camel/component/http/HttpEndpoint.java
+camel-http/src/main/java/org/apache/camel/component/http/HttpExchange.java
+camel-http/src/main/java/org/apache/camel/component/http/HttpMessage.java
+comments:
+a very rough cut of a http component for camel
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521286 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-22T13:59:34Z
+class:
+camel-jbi/src/main/java/org/apache/camel/component/jbi/JbiBinding.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/JbiEndpoint.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/JbiExchange.java
+camel-jbi/src/main/java/org/apache/camel/component/jbi/JbiMessage.java
+camel-jms/src/main/java/org/apache/camel/component/jms/JmsExchange.java
+camel-jms/src/main/java/org/apache/camel/component/jms/JmsMessage.java
+comments:
+more tidying up of the Exchange/Message APIs and an initial JBI implementation
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521274 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-22T13:36:04Z
+class:
+camel-core/src/main/java/org/apache/camel/impl/DefaultMessage.java
+camel-jms/src/main/java/org/apache/camel/component/jms/JmsMessage.java
+comments:
+another minor change; added helper method so that implementors only need to worry about doing the initial population
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521259 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-22T13:27:06Z
+class:
+camel-core/src/main/java/org/apache/camel/impl/DefaultMessage.java
+camel-jms/src/main/java/org/apache/camel/component/jms/JmsMessage.java
+comments:
+minor refactor to add similar lazy-create callback for creating headers on inbound messages; so its nice and easy to write efficient Message implementations
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521256 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-22T13:12:59Z
+class:
+camel-core/src/main/java/org/apache/camel/impl/MessageSupport.java
+camel-jms/src/main/java/org/apache/camel/component/jms/JmsMessage.java
+comments:
+minor refactor to make it easier to create lazy-initialisation body messages
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521252 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-22T12:40:46Z
+class:
+camel-jms/src/main/java/org/apache/camel/component/jms/JmsBinding.java
+camel-jms/src/main/java/org/apache/camel/component/jms/JmsEndpoint.java
+camel-jms/src/test/java/org/apache/camel/component/jms/JmsRouteTest.java
+comments:
+handle headers nicely in the binding and tidied up the test cases to test for them
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521240 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-22T12:22:41Z
+class:
+camel-jms/src/main/java/org/apache/camel/component/jms/JmsBinding.java
+camel-jms/src/main/java/org/apache/camel/component/jms/JmsComponent.java
+camel-jms/src/main/java/org/apache/camel/component/jms/JmsEndpointResolver.java
+camel-jms/src/main/java/org/apache/camel/component/jms/JmsExchange.java
+camel-jms/src/main/java/org/apache/camel/component/jms/JmsMessage.java
+camel-jms/src/main/java/org/apache/camel/component/jms/MessageListenerProcessor.java
+camel-jms/src/main/java/org/apache/camel/component/jms/MessagePropertyAcessException.java
+camel-jms/src/main/java/org/apache/camel/component/jms/MessagePropertyNamesAcessException.java
+camel-jms/src/main/java/org/apache/camel/component/jms/RuntimeJmsException.java
+camel-jms/src/test/java/org/apache/camel/component/jms/JmsRouteTest.java
+comments:
+tidied up the code
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521238 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-22T12:19:26Z
+class:
+camel-jms/src/main/java/org/apache/camel/component/jms/JmsBinding.java
+camel-jms/src/main/java/org/apache/camel/component/jms/JmsEndpoint.java
+camel-jms/src/main/java/org/apache/camel/component/jms/JmsExchange.java
+camel-jms/src/main/java/org/apache/camel/component/jms/JmsMessage.java
+camel-jms/src/test/java/org/apache/camel/component/jms/JmsRouteTest.java
+camel-jms/src/test/java/org/apache/camel/component/jms/PurchaseOrder.java
+comments:
+tidied up the JMS component, added a separate strategy JmsBinding which deals with the actual binding of Camel <-> JMS and tested that the binding uses TextMessage or ObjectMessage based on the payload
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521236 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-22T10:32:03Z
+class:
+camel-core/src/main/java/org/apache/camel/CamelContext.java
+camel-core/src/main/java/org/apache/camel/Exchange.java
+camel-core/src/main/java/org/apache/camel/builder/RouteBuilder.java
+camel-core/src/main/java/org/apache/camel/component/queue/QueueEndpointResolver.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultCamelContext.java
+camel-core/src/test/java/org/apache/camel/component/pojo/PojoRouteTest.java
+camel-core/src/test/java/org/apache/camel/component/queue/QueueRouteTest.java
+camel-jms/src/main/java/org/apache/camel/component/jms/JmsEndpointResolver.java
+camel-jms/src/test/java/org/apache/camel/component/jms/JmsRouteTest.java
+camel-mina/src/main/java/org/apache/camel/component/mina/MinaEndpointResolver.java
+camel-mina/src/test/java/org/apache/camel/component/mina/MinaTest.java
+comments:
+removed the generics on CamelContext
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521193 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-22T10:16:55Z
+class:
+camel-jms/src/main/java/org/apache/camel/component/jms/DefaultJmsExchange.java
+camel-jms/src/main/java/org/apache/camel/component/jms/DefaultJmsMessage.java
+camel-jms/src/main/java/org/apache/camel/component/jms/JmsEndpoint.java
+camel-jms/src/main/java/org/apache/camel/component/jms/JmsExchange.java
+camel-jms/src/main/java/org/apache/camel/component/jms/JmsMessage.java
+comments:
+tidied up the JMS component to avoid unnecessary interfaces
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521186 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-22T10:06:30Z
+class:
+camel-core/src/main/java/org/apache/camel/Exchange.java
+camel-core/src/main/java/org/apache/camel/builder/ExpressionBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/xpath/MessageVariableResolver.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultExchange.java
+comments:
+refactored the use of 'headers' on the Exchange to 'properties' as headers are usually protocol dependent (e.g. strings in HTTP) whereas properties can be arbitrary things
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521181 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-22T09:59:46Z
+class:
+camel-core/src/main/java/org/apache/camel/CamelContext.java
+camel-core/src/main/java/org/apache/camel/EndpointResolver.java
+camel-core/src/main/java/org/apache/camel/Exchange.java
+camel-core/src/main/java/org/apache/camel/Headers.java
+camel-core/src/main/java/org/apache/camel/Message.java
+camel-core/src/main/java/org/apache/camel/builder/ChoiceBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/ConstantProcessorBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/ExpressionBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/ExpressionFactory.java
+camel-core/src/main/java/org/apache/camel/builder/LoggingErrorHandlerBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/PipelineBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/PredicateFactory.java
+camel-core/src/main/java/org/apache/camel/builder/RecipientListBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/RouteBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/ToBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/WhenBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/xpath/DefaultNamespaceContext.java
+camel-core/src/main/java/org/apache/camel/builder/xpath/ExchangeXPathExpression.java
+camel-core/src/main/java/org/apache/camel/builder/xpath/InvalidXPathExpression.java
+camel-core/src/main/java/org/apache/camel/builder/xpath/MessageVariableResolver.java
+camel-core/src/main/java/org/apache/camel/builder/xpath/XPathBuilder.java
+camel-core/src/main/java/org/apache/camel/component/pojo/PojoComponent.java
+camel-core/src/main/java/org/apache/camel/component/pojo/PojoEndpoint.java
+camel-core/src/main/java/org/apache/camel/component/pojo/PojoExchange.java
+camel-core/src/main/java/org/apache/camel/component/queue/QueueComponent.java
+camel-core/src/main/java/org/apache/camel/component/queue/QueueEndpoint.java
+camel-core/src/main/java/org/apache/camel/component/queue/QueueEndpointResolver.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultComponent.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultExchange.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultExchangeConverter.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultHeaders.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultMessage.java
+camel-core/src/main/java/org/apache/camel/impl/HeadersSupport.java
+camel-core/src/main/java/org/apache/camel/impl/MessageSupport.java
+camel-core/src/main/java/org/apache/camel/processor/ChoiceProcessor.java
+camel-core/src/main/java/org/apache/camel/processor/DeadLetterChannel.java
+camel-core/src/main/java/org/apache/camel/processor/FilterProcessor.java
+camel-core/src/main/java/org/apache/camel/processor/Pipeline.java
+camel-core/src/main/java/org/apache/camel/processor/RecipientList.java
+camel-core/src/main/java/org/apache/camel/processor/RedeliveryPolicy.java
+camel-core/src/main/java/org/apache/camel/processor/SendProcessor.java
+camel-core/src/main/java/org/apache/camel/processor/Splitter.java
+camel-core/src/main/java/org/apache/camel/util/FactoryFinder.java
+camel-core/src/main/java/org/apache/camel/util/IntrospectionSupport.java
+camel-core/src/main/java/org/apache/camel/util/ObjectHelper.java
+camel-core/src/test/java/org/apache/camel/builder/ErrorHandlerTest.java
+camel-core/src/test/java/org/apache/camel/builder/xpath/XPathTest.java
+camel-core/src/test/java/org/apache/camel/component/pojo/PojoRouteTest.java
+camel-core/src/test/java/org/apache/camel/component/queue/QueueRouteTest.java
+camel-jms/src/main/java/org/apache/camel/component/jms/DefaultJmsMessage.java
+camel-jms/src/main/java/org/apache/camel/component/jms/JmsHeaders.java
+camel-jms/src/test/java/org/apache/camel/component/jms/JmsRouteTest.java
+camel-mina/src/test/java/org/apache/camel/component/mina/MinaTest.java
+comments:
+refactored the Exchange/Message API to remove Headers (it was just a pain for end users) and moved that API into Exchange and Message
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521180 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-22T09:25:12Z
+class:
+camel-core/src/main/java/org/apache/camel/Predicate.java
+camel-core/src/main/java/org/apache/camel/Provider.java
+camel-core/src/main/java/org/apache/camel/builder/ExpressionBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/ExpressionFactory.java
+camel-core/src/main/java/org/apache/camel/builder/PredicateBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/PredicateFactory.java
+camel-core/src/main/java/org/apache/camel/builder/xpath/ExchangeXPathExpression.java
+camel-core/src/main/java/org/apache/camel/builder/xpath/XPathBuilder.java
+camel-core/src/main/java/org/apache/camel/processor/FilterProcessor.java
+camel-core/src/main/java/org/apache/camel/util/ObjectHelper.java
+camel-core/src/test/java/org/apache/camel/builder/xpath/XPathTest.java
+comments:
+added XPath predicate support; also refactored the Predicate interface so a single expression class can implement predicate and expression
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521162 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-22T09:03:43Z
+class:
+camel-core/src/main/java/org/apache/camel/RuntimeExpressionException.java
+camel-core/src/main/java/org/apache/camel/builder/ExpressionBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/ValueBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/xpath/DefaultNamespaceContext.java
+camel-core/src/main/java/org/apache/camel/builder/xpath/ExchangeXPathExpression.java
+camel-core/src/main/java/org/apache/camel/builder/xpath/InvalidXPathExpression.java
+camel-core/src/main/java/org/apache/camel/builder/xpath/MessageVariableResolver.java
+camel-core/src/main/java/org/apache/camel/builder/xpath/XPathBuilder.java
+camel-core/src/test/java/org/apache/camel/builder/xpath/XPathTest.java
+comments:
+added an XPath builder with test case
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521156 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-22T08:41:08Z
+class:
+camel-core/src/main/java/org/apache/camel/builder/Fluent.java
+camel-core/src/main/java/org/apache/camel/builder/FromBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/InterceptorBuilder.java
+camel-core/src/test/java/org/apache/camel/builder/MyInterceptorProcessor.java
+camel-core/src/test/java/org/apache/camel/builder/RouteBuilderTest.java
+camel-spring/src/main/java/org/apache/camel/spring/BuilderAction.java
+camel-spring/src/main/java/org/apache/camel/spring/CamelBeanDefinitionParser.java
+camel-spring/src/main/java/org/apache/camel/spring/IllegalActionException.java
+camel-spring/src/main/java/org/apache/camel/spring/MethodInfo.java
+camel-spring/src/test/java/org/apache/camel/spring/SpringRouteBuilderTest.java
+comments:
+More enhancements to the CamelBeanDefinitionParser.
+ - It can now continue building off child elements 
+ - It can now automatically add an builder action as a result of reaching the end of an element
+ - interceptor configuration is now working
+ 
+
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521152 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-22T07:03:10Z
+class:
+camel-core/src/main/java/org/apache/camel/builder/BuilderSupport.java
+camel-core/src/main/java/org/apache/camel/builder/FilterBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/FluentArg.java
+camel-core/src/main/java/org/apache/camel/builder/FromBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/ValueBuilder.java
+camel-core/src/test/java/org/apache/camel/builder/MyProcessor.java
+camel-core/src/test/java/org/apache/camel/builder/RouteBuilderTest.java
+camel-spring/src/main/java/org/apache/camel/spring/BuilderAction.java
+camel-spring/src/main/java/org/apache/camel/spring/BuilderStatement.java
+camel-spring/src/main/java/org/apache/camel/spring/CamelBeanDefinitionParser.java
+camel-spring/src/main/java/org/apache/camel/spring/MethodInfo.java
+camel-spring/src/main/java/org/apache/camel/spring/RouteBuilderFactory.java
+camel-spring/src/main/java/org/apache/camel/spring/RouteBuilderStatement.java
+camel-spring/src/test/java/org/apache/camel/spring/SpringRouteBuilderTest.java
+comments:
+Some substancial improvement of the CamelBeanDefinitionParser.  It can now handle using builder sub statement to create arguments to builder methods.
+This was needed to implement the filter case.
+
+
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521139 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-22T00:49:27Z
+class:
+camel-spring/src/test/java/org/apache/camel/spring/SpringRouteBuilderTest.java
+comments:
+Got the <process> element working
+
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521058 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-21T22:57:15Z
+class:
+comments:
+Added to the svn ignore list
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521042 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-21T22:57:13Z
+class:
+comments:
+Added to the svn ignore list
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521041 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-21T22:57:11Z
+class:
+comments:
+Added to the svn ignore list
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521040 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-21T22:57:09Z
+class:
+comments:
+Added to the svn ignore list
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521039 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-21T22:57:07Z
+class:
+comments:
+Added to the svn ignore list
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521038 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-21T22:54:13Z
+class:
+camel-xbean/src/main/java/org/apache/camel/spring/CamelBeanDefinitionParser.java
+camel-xbean/src/main/java/org/apache/camel/spring/CamelNamespaceHandler.java
+camel-xbean/src/main/java/org/apache/camel/spring/IllegalRouteException.java
+camel-xbean/src/main/java/org/apache/camel/spring/MethodInfo.java
+camel-xbean/src/main/java/org/apache/camel/spring/RouteBuilderAction.java
+camel-xbean/src/main/java/org/apache/camel/spring/RouteBuilderFactory.java
+camel-xbean/src/main/java/org/apache/camel/spring/RouteBuilderStatement.java
+camel-xbean/src/test/java/org/apache/camel/spring/SpringXMLExtensionTest.java
+camel-xbean/src/test/java/org/apache/camel/xbean/XBeanRouteBuilderTest.java
+comments:
+camel-xbean to camel-spring rename
+
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521037 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-21T22:53:32Z
+class:
+camel-spring/src/main/java/org/apache/camel/spring/CamelBeanDefinitionParser.java
+camel-spring/src/main/java/org/apache/camel/spring/CamelNamespaceHandler.java
+camel-spring/src/main/java/org/apache/camel/spring/IllegalRouteException.java
+camel-spring/src/main/java/org/apache/camel/spring/MethodInfo.java
+camel-spring/src/main/java/org/apache/camel/spring/RouteBuilderAction.java
+camel-spring/src/main/java/org/apache/camel/spring/RouteBuilderFactory.java
+camel-spring/src/main/java/org/apache/camel/spring/RouteBuilderStatement.java
+camel-spring/src/test/java/org/apache/camel/spring/SpringXMLExtensionTest.java
+camel-spring/src/test/java/org/apache/camel/xbean/XBeanRouteBuilderTest.java
+comments:
+renamed camel-xbean to camel-spring since this is turning out to be more of a spring integration.
+
+
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521035 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-21T22:11:12Z
+class:
+camel-core/src/main/java/org/apache/camel/builder/Fluent.java
+camel-core/src/main/java/org/apache/camel/builder/FluentArg.java
+camel-core/src/main/java/org/apache/camel/builder/FromBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/RouteBuilder.java
+camel-xbean/src/main/java/org/apache/camel/spring/CamelBeanDefinitionParser.java
+camel-xbean/src/main/java/org/apache/camel/spring/IllegalRouteException.java
+camel-xbean/src/main/java/org/apache/camel/spring/MethodInfo.java
+camel-xbean/src/main/java/org/apache/camel/spring/RouteBuilderAction.java
+camel-xbean/src/main/java/org/apache/camel/spring/RouteBuilderFactory.java
+camel-xbean/src/main/java/org/apache/camel/spring/RouteBuilderStatement.java
+camel-xbean/src/test/java/org/apache/camel/spring/SpringXMLExtensionTest.java
+comments:
+Added the Fluent Annotations so that the spring processor can do better mapping of the builders to XML
+Got the first spring based builder test case working!
+
+
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@521021 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-21T20:19:55Z
+class:
+camel-core/src/main/java/org/apache/camel/impl/DefaultCamelContext.java
+camel-mina/src/main/java/org/apache/camel/component/mina/MinaComponent.java
+camel-mina/src/main/java/org/apache/camel/component/mina/MinaEndpoint.java
+camel-mina/src/test/java/org/apache/camel/component/mina/MinaTest.java
+comments:
+got a very basic test case working for Mina
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520989 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-21T20:04:20Z
+class:
+comments:
+added discovery file for mina
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520986 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-21T20:02:40Z
+class:
+camel-core/src/main/java/org/apache/camel/EndpointResolver.java
+camel-core/src/main/java/org/apache/camel/ResolveEndpointFailedException.java
+camel-core/src/main/java/org/apache/camel/builder/RouteBuilder.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultCamelContext.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultComponent.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultEndpointResolver.java
+camel-jms/src/main/java/org/apache/camel/component/jms/JmsComponent.java
+camel-jms/src/main/java/org/apache/camel/component/jms/JmsEndpointResolver.java
+camel-mina/src/main/java/org/apache/camel/component/mina/MinaComponent.java
+camel-mina/src/main/java/org/apache/camel/component/mina/MinaEndpoint.java
+camel-mina/src/main/java/org/apache/camel/component/mina/MinaEndpointResolver.java
+camel-mina/src/main/java/org/apache/camel/component/mina/MinaExchange.java
+camel-mina/src/test/java/org/apache/camel/component/mina/MinaTest.java
+comments:
+minor refactorings to make it easy to implement a resolver and avoid wrapping any underlying exceptions; also added a very rough initial spike of a MINA module
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520985 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-21T19:19:01Z
+class:
+camel-core/src/test/java/org/apache/camel/component/queue/QueueRouteTest.java
+comments:
+changed package
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520974 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-21T17:59:12Z
+class:
+camel-core/src/test/java/org/apache/camel/component/pojo/PojoRouteTest.java
+camel-jms/src/test/java/org/apache/camel/component/jms/JmsRouteTest.java
+comments:
+fixed broken tests
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520967 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-21T17:53:47Z
+class:
+camel-core/src/main/java/org/apache/camel/component/pojo/PojoComponent.java
+camel-core/src/main/java/org/apache/camel/component/pojo/PojoEndpoint.java
+camel-core/src/main/java/org/apache/camel/component/pojo/PojoEndpointResolver.java
+camel-core/src/main/java/org/apache/camel/component/pojo/PojoExchange.java
+camel-core/src/main/java/org/apache/camel/component/pojo/PojoInvocation.java
+camel-core/src/main/java/org/apache/camel/component/queue/QueueComponent.java
+camel-core/src/main/java/org/apache/camel/component/queue/QueueEndpoint.java
+camel-core/src/main/java/org/apache/camel/component/queue/QueueEndpointResolver.java
+camel-core/src/test/java/org/apache/camel/component/pojo/ISay.java
+camel-core/src/test/java/org/apache/camel/component/pojo/PojoRouteTest.java
+camel-core/src/test/java/org/apache/camel/component/pojo/SayService.java
+camel-core/src/test/java/org/apache/camel/component/queue/QueueRouteTest.java
+camel-jms/src/main/java/org/apache/camel/component/jms/Builder.java
+camel-jms/src/main/java/org/apache/camel/component/jms/DefaultJmsExchange.java
+camel-jms/src/main/java/org/apache/camel/component/jms/DefaultJmsMessage.java
+camel-jms/src/main/java/org/apache/camel/component/jms/JmsComponent.java
+camel-jms/src/main/java/org/apache/camel/component/jms/JmsEndpoint.java
+camel-jms/src/main/java/org/apache/camel/component/jms/JmsEndpointResolver.java
+camel-jms/src/main/java/org/apache/camel/component/jms/JmsExchange.java
+camel-jms/src/main/java/org/apache/camel/component/jms/JmsHeaders.java
+camel-jms/src/main/java/org/apache/camel/component/jms/JmsMessage.java
+camel-jms/src/main/java/org/apache/camel/component/jms/MessageListenerProcessor.java
+camel-jms/src/main/java/org/apache/camel/component/jms/MessagePropertyAcessException.java
+camel-jms/src/main/java/org/apache/camel/component/jms/MessagePropertyNamesAcessException.java
+camel-jms/src/main/java/org/apache/camel/component/jms/RuntimeJmsException.java
+camel-jms/src/test/java/org/apache/camel/component/jms/JmsRouteTest.java
+comments:
+refactored the components into the camel.component package
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520964 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-21T17:45:38Z
+class:
+camel-core/src/main/java/org/apache/camel/builder/BuilderSupport.java
+camel-core/src/main/java/org/apache/camel/builder/FromBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/RouteBuilder.java
+camel-core/src/test/java/org/apache/camel/builder/ErrorHandlerTest.java
+comments:
+added the ability to enable/disable the inheritence of error handlers so that we could, say, use a single Dead Letter Channel on the top most Processor in a route
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520962 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-21T16:38:24Z
+class:
+camel-core/src/main/java/org/apache/camel/builder/RouteBuilder.java
+comments:
+added a helper method for easy addition of custom interceptors
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520942 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-21T16:29:40Z
+class:
+camel-core/src/main/java/org/apache/camel/builder/BuilderSupport.java
+camel-core/src/main/java/org/apache/camel/builder/DeadLetterChannelBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/FromBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/LoggingErrorHandlerBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/NoErrorHandlerBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/RouteBuilder.java
+camel-core/src/main/java/org/apache/camel/processor/RedeliveryPolicy.java
+camel-core/src/test/java/org/apache/camel/TestSupport.java
+camel-core/src/test/java/org/apache/camel/builder/ErrorHandlerTest.java
+camel-core/src/test/java/org/apache/camel/builder/RouteBuilderTest.java
+comments:
+minor refactor so that the BuilderSupport can easily create endpoints and the deadLetterChannel policy and added some test cases showing how to configure the policy and redelivery policy
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520939 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-21T15:39:39Z
+class:
+comments:
+updated the javadoc
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520918 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-21T15:30:58Z
+class:
+camel-xbean/src/main/java/org/apache/camel/spring/CamelBeanDefinitionParser.java
+camel-xbean/src/main/java/org/apache/camel/spring/CamelNamespaceHandler.java
+camel-xbean/src/main/java/org/apache/camel/spring/RouteBuilderAction.java
+camel-xbean/src/main/java/org/apache/camel/spring/RouteBuilderFactory.java
+camel-xbean/src/main/java/org/apache/camel/spring/RouteBuilderStatement.java
+camel-xbean/src/test/java/org/apache/camel/spring/SpringXMLExtensionTest.java
+comments:
+Started working on a CamelNamespaceHandler for spring.
+
+
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520915 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-21T15:26:12Z
+class:
+camel-core/src/main/java/org/apache/camel/Endpoint.java
+camel-core/src/main/java/org/apache/camel/Message.java
+camel-core/src/main/java/org/apache/camel/Processor.java
+comments:
+updated the javadoc
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520913 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-21T14:37:11Z
+class:
+camel-core/src/main/java/org/apache/camel/builder/BuilderSupport.java
+camel-core/src/main/java/org/apache/camel/builder/FromBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/InterceptorBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/LoggingErrorHandlerBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/NoErrorHandlerBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/RecipientListBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/RouteBuilder.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultCamelContext.java
+camel-core/src/main/java/org/apache/camel/processor/DeadLetterChannel.java
+camel-core/src/main/java/org/apache/camel/processor/ErrorHandler.java
+camel-core/src/main/java/org/apache/camel/processor/Logger.java
+camel-core/src/main/java/org/apache/camel/processor/LoggingErrorHandler.java
+camel-core/src/main/java/org/apache/camel/processor/LoggingLevel.java
+camel-core/src/test/java/org/apache/camel/TestSupport.java
+camel-core/src/test/java/org/apache/camel/builder/ErrorHandlerTest.java
+camel-core/src/test/java/org/apache/camel/builder/RouteBuilderTest.java
+camel-xbean/src/test/java/org/apache/camel/xbean/XBeanRouteBuilderTest.java
+comments:
+added test cases showing the use of the errorHandler() DSL to configure error handlers for an entire set of routes or on a specific route. Also added a useful base class for test cases
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520900 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-21T12:33:32Z
+class:
+camel-core/src/main/java/org/apache/camel/Endpoint.java
+camel-core/src/main/java/org/apache/camel/Exchange.java
+camel-core/src/main/java/org/apache/camel/builder/BuilderSupport.java
+camel-core/src/main/java/org/apache/camel/builder/DeadLetterChannelBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/ErrorHandlerBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/ExpressionBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/FromBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/MulticastBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/PipelineBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/PredicateBuilder.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultEndpoint.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultExchange.java
+camel-core/src/main/java/org/apache/camel/processor/DeadLetterChannel.java
+camel-core/src/main/java/org/apache/camel/processor/MulticastProcessor.java
+camel-core/src/main/java/org/apache/camel/processor/Pipeline.java
+camel-core/src/main/java/org/apache/camel/processor/RecipientList.java
+camel-core/src/main/java/org/apache/camel/processor/RedeliveryPolicy.java
+camel-core/src/main/java/org/apache/camel/util/ExchangeHelper.java
+camel-core/src/test/java/org/apache/camel/RouteBuilderTest.java
+comments:
+added support for DeadLetterChannel, Multicast and Pipeline patterns along with adding an error handler to the RouteBuilder so folks can configure the dead letter policy and so forth
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520860 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-21T09:56:11Z
+class:
+camel-core/src/main/java/org/apache/camel/processor/DeadLetterChannel.java
+camel-core/src/main/java/org/apache/camel/processor/Logger.java
+camel-core/src/main/java/org/apache/camel/processor/RedeliveryPolicy.java
+comments:
+added an initial implementation of Dead Letter Channel
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520823 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-20T21:13:43Z
+class:
+comments:
+make it even more concise
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520599 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-20T20:43:49Z
+class:
+comments:
+retabed
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520566 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-20T20:42:17Z
+class:
+comments:
+made xml more ideal
+
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520564 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-20T19:52:38Z
+class:
+camel-core/src/main/java/org/apache/camel/Component.java
+camel-core/src/main/java/org/apache/camel/builder/PredicateBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/ValueBuilder.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultCamelContext.java
+camel-core/src/main/java/org/apache/camel/pojo/PojoComponent.java
+camel-core/src/main/java/org/apache/camel/processor/RecipientList.java
+camel-core/src/main/java/org/apache/camel/processor/Splitter.java
+camel-core/src/main/java/org/apache/camel/queue/QueueComponent.java
+camel-core/src/main/java/org/apache/camel/util/ObjectHelper.java
+camel-jms/src/main/java/org/apache/camel/jms/JmsComponent.java
+comments:
+some minor refactoring
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520539 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-20T19:31:47Z
+class:
+camel-core/src/main/java/org/apache/camel/CamelContext.java
+camel-core/src/main/java/org/apache/camel/builder/RouteBuilder.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultCamelContext.java
+camel-core/src/main/java/org/apache/camel/processor/RecipientList.java
+camel-core/src/test/java/org/apache/camel/pojo/PojoRouteTest.java
+camel-core/src/test/java/org/apache/camel/queue/QueueRouteTest.java
+camel-jms/src/test/java/org/apache/camel/jms/JmsRouteTest.java
+comments:
+Made CamelContext an interface and move the implementation to impl.DefaultCamelContext
+
+
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520532 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-20T19:01:21Z
+class:
+camel-core/src/main/java/org/apache/camel/Exchange.java
+camel-core/src/main/java/org/apache/camel/Message.java
+camel-core/src/main/java/org/apache/camel/NoSuchEndpointException.java
+camel-core/src/main/java/org/apache/camel/builder/BuilderSupport.java
+camel-core/src/main/java/org/apache/camel/builder/ExpressionBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/RouteBuilder.java
+comments:
+Eliminated some warnings. 
+
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520523 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-20T18:48:59Z
+class:
+camel-core/src/test/java/org/apache/camel/RouteBuilderTest.java
+comments:
+updated snippet macro
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520519 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-20T18:47:34Z
+class:
+camel-core/src/main/java/org/apache/camel/CamelContext.java
+camel-core/src/main/java/org/apache/camel/TypeConverter.java
+camel-core/src/main/java/org/apache/camel/builder/BuilderSupport.java
+camel-core/src/main/java/org/apache/camel/builder/ExpressionBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/PredicateBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/ValueBuilder.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultTypeConverter.java
+camel-core/src/main/java/org/apache/camel/util/ExchangeHelper.java
+camel-core/src/test/java/org/apache/camel/RouteBuilderTest.java
+comments:
+added more builder methods together with a better Splitter example
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520517 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-20T18:08:45Z
+class:
+camel-core/src/main/java/org/apache/camel/Exchange.java
+camel-core/src/main/java/org/apache/camel/Headers.java
+camel-core/src/main/java/org/apache/camel/Message.java
+camel-core/src/main/java/org/apache/camel/builder/FromBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/SplitterBuilder.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultExchange.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultHeaders.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultMessage.java
+camel-core/src/main/java/org/apache/camel/impl/HeadersSupport.java
+camel-core/src/main/java/org/apache/camel/pojo/PojoEndpoint.java
+camel-core/src/main/java/org/apache/camel/pojo/PojoExchange.java
+camel-core/src/main/java/org/apache/camel/processor/Splitter.java
+camel-core/src/test/java/org/apache/camel/RouteBuilderTest.java
+camel-jms/src/main/java/org/apache/camel/jms/DefaultJmsExchange.java
+camel-jms/src/main/java/org/apache/camel/jms/DefaultJmsMessage.java
+camel-jms/src/main/java/org/apache/camel/jms/JmsHeaders.java
+comments:
+added some helper methods to make it easier to copy exchanges to send them to different locations
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520502 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-20T18:01:41Z
+class:
+camel-core/src/main/java/org/apache/camel/builder/BuilderSupport.java
+camel-core/src/main/java/org/apache/camel/builder/ExpressionBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/FilterBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/PredicateBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/ValueBuilder.java
+comments:
+Moved Expression and Predicates uner builder 
+
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520498 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-20T17:04:27Z
+class:
+camel-core/src/main/java/org/apache/camel/builder/ChoiceBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/ConstantProcessorBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/FilterBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/FromBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/InterceptorBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/ProcessorFactory.java
+camel-core/src/main/java/org/apache/camel/builder/RecipientListBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/RouteBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/ToBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/WhenBuilder.java
+comments:
+renamed the builders to make them a little easier to follow; they generally now follow the name of the verb in the builder language
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520482 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-20T16:14:31Z
+class:
+camel-core/src/main/java/org/apache/camel/impl/DefaultExchange.java
+camel-core/src/main/java/org/apache/camel/impl/ExchangeSupport.java
+comments:
+added a Message and Headers interface to the Exchange making it easy to process messages in a generic way, in addition to using a custom Exchange type to access the underlying transport information
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520458 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-20T16:13:51Z
+class:
+camel-core/src/main/java/org/apache/camel/Exchange.java
+camel-core/src/main/java/org/apache/camel/Expressions.java
+camel-core/src/main/java/org/apache/camel/Headers.java
+camel-core/src/main/java/org/apache/camel/Message.java
+camel-core/src/main/java/org/apache/camel/builder/RouteBuilder.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultHeaders.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultMessage.java
+camel-core/src/main/java/org/apache/camel/pojo/PojoEndpoint.java
+camel-core/src/main/java/org/apache/camel/pojo/PojoExchange.java
+camel-core/src/main/java/org/apache/camel/processor/RecipientList.java
+camel-core/src/test/java/org/apache/camel/RouteBuilderTest.java
+camel-core/src/test/java/org/apache/camel/queue/QueueRouteTest.java
+camel-jms/src/main/java/org/apache/camel/jms/DefaultJmsExchange.java
+camel-jms/src/main/java/org/apache/camel/jms/DefaultJmsMessage.java
+camel-jms/src/main/java/org/apache/camel/jms/JmsExchange.java
+camel-jms/src/main/java/org/apache/camel/jms/JmsHeaders.java
+camel-jms/src/main/java/org/apache/camel/jms/JmsMessage.java
+camel-jms/src/test/java/org/apache/camel/jms/JmsRouteTest.java
+comments:
+added a Message and Headers interface to the Exchange making it easy to process messages in a generic way, in addition to using a custom Exchange type to access the underlying transport information
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520457 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-20T15:17:02Z
+class:
+camel-core/src/main/java/org/apache/camel/Message.java
+comments:
+added an experimental interface for Messages
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520424 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-20T14:21:58Z
+class:
+camel-core/src/main/java/org/apache/camel/CamelContext.java
+camel-core/src/main/java/org/apache/camel/Component.java
+camel-core/src/main/java/org/apache/camel/Endpoint.java
+camel-core/src/main/java/org/apache/camel/EndpointResolver.java
+camel-core/src/main/java/org/apache/camel/Exchange.java
+camel-core/src/main/java/org/apache/camel/NoSuchEndpointException.java
+camel-core/src/main/java/org/apache/camel/RouteFactory.java
+camel-core/src/main/java/org/apache/camel/builder/ChoiceBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/ConfiguredDestinationBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/DestinationBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/InterceptorBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/PredicateBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/RecipientListBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/RouteBuilder.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultEndpoint.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultEndpointResolver.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultExchange.java
+camel-core/src/main/java/org/apache/camel/impl/ExchangeSupport.java
+camel-core/src/main/java/org/apache/camel/pojo/PojoComponent.java
+camel-core/src/main/java/org/apache/camel/pojo/PojoEndpoint.java
+camel-core/src/main/java/org/apache/camel/pojo/PojoEndpointResolver.java
+camel-core/src/main/java/org/apache/camel/pojo/PojoExchange.java
+camel-core/src/main/java/org/apache/camel/processor/ChoiceProcessor.java
+camel-core/src/main/java/org/apache/camel/processor/CompositeProcessor.java
+camel-core/src/main/java/org/apache/camel/processor/FilterProcessor.java
+camel-core/src/main/java/org/apache/camel/processor/InterceptorProcessor.java
+camel-core/src/main/java/org/apache/camel/processor/RecipientList.java
+camel-core/src/main/java/org/apache/camel/processor/SendProcessor.java
+camel-core/src/main/java/org/apache/camel/queue/QueueComponent.java
+camel-core/src/main/java/org/apache/camel/queue/QueueEndpoint.java
+camel-core/src/main/java/org/apache/camel/queue/QueueEndpointResolver.java
+camel-core/src/test/java/org/apache/camel/RouteBuilderTest.java
+camel-core/src/test/java/org/apache/camel/pojo/PojoRouteTest.java
+camel-core/src/test/java/org/apache/camel/queue/QueueRouteTest.java
+camel-jms/src/main/java/org/apache/camel/jms/Builder.java
+camel-jms/src/main/java/org/apache/camel/jms/DefaultJmsExchange.java
+camel-jms/src/main/java/org/apache/camel/jms/JmsComponent.java
+camel-jms/src/main/java/org/apache/camel/jms/JmsEndpoint.java
+camel-jms/src/main/java/org/apache/camel/jms/JmsEndpointResolver.java
+camel-jms/src/test/java/org/apache/camel/jms/JmsRouteTest.java
+comments:
+minor refactor to move the processors into a separate package
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520404 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-20T12:40:49Z
+class:
+camel-core/src/test/java/org/apache/camel/RouteBuilderTest.java
+comments:
+fixed spelling error and fixed up snippet tags
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520376 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-20T12:39:34Z
+class:
+camel-core/src/main/java/org/apache/camel/Exchange.java
+camel-core/src/main/java/org/apache/camel/Expressions.java
+camel-core/src/main/java/org/apache/camel/NoSuchEndpointException.java
+camel-core/src/main/java/org/apache/camel/RecipientList.java
+camel-core/src/main/java/org/apache/camel/builder/DestinationBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/RecipientListBuilder.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultExchange.java
+camel-core/src/main/java/org/apache/camel/impl/ExchangeSupport.java
+camel-core/src/main/java/org/apache/camel/pojo/PojoComponent.java
+camel-core/src/main/java/org/apache/camel/pojo/PojoEndpoint.java
+camel-core/src/main/java/org/apache/camel/pojo/PojoEndpointResolver.java
+camel-core/src/main/java/org/apache/camel/pojo/PojoExchange.java
+camel-core/src/main/java/org/apache/camel/pojo/PojoInvocation.java
+camel-core/src/main/java/org/apache/camel/queue/QueueEndpoint.java
+camel-core/src/main/java/org/apache/camel/queue/QueueEndpointResolver.java
+camel-core/src/main/java/org/apache/camel/util/ObjectHelper.java
+camel-core/src/test/java/org/apache/camel/RouteBuilderTest.java
+camel-core/src/test/java/org/apache/camel/pojo/PojoRouteTest.java
+camel-core/src/test/java/org/apache/camel/queue/QueueRouteTest.java
+camel-jms/src/main/java/org/apache/camel/jms/DefaultJmsExchange.java
+camel-jms/src/main/java/org/apache/camel/jms/JmsEndpoint.java
+camel-jms/src/main/java/org/apache/camel/jms/MessageListenerProcessor.java
+comments:
+added support for RecipientList pattern
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520375 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-20T10:11:50Z
+class:
+camel-core/src/main/java/org/apache/camel/Exchange.java
+camel-core/src/main/java/org/apache/camel/impl/ExchangeSupport.java
+comments:
+add exchange id 
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520346 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-20T09:11:47Z
+class:
+camel-core/src/main/java/org/apache/camel/queue/QueueEndpointResolver.java
+camel-core/src/test/java/org/apache/camel/pojo/ISay.java
+camel-core/src/test/java/org/apache/camel/pojo/PojoComponent.java
+camel-core/src/test/java/org/apache/camel/pojo/PojoEndpoint.java
+camel-core/src/test/java/org/apache/camel/pojo/PojoEndpointResolver.java
+camel-core/src/test/java/org/apache/camel/pojo/PojoExchange.java
+camel-core/src/test/java/org/apache/camel/pojo/PojoInvocation.java
+camel-core/src/test/java/org/apache/camel/pojo/PojoRouteTest.java
+camel-core/src/test/java/org/apache/camel/pojo/SayService.java
+comments:
+Added a little Pojo play component in the test section.  This now gives another component that we can test against.
+It would be nice to see how exchange conversions will be implemented.
+
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520341 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-20T08:28:24Z
+class:
+camel-core/src/main/java/org/apache/camel/SendProcessor.java
+camel-core/src/main/java/org/apache/camel/builder/DestinationBuilder.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultEndpoint.java
+comments:
+Small enhancements
+
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520320 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-20T07:53:04Z
+class:
+camel-core/src/main/java/org/apache/camel/CamelContainer.java
+camel-core/src/main/java/org/apache/camel/Endpoint.java
+camel-core/src/main/java/org/apache/camel/Processors.java
+camel-core/src/main/java/org/apache/camel/builder/ChoiceBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/PredicateBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/UndefinedDestinationException.java
+camel-core/src/main/java/org/apache/camel/queue/QueueEndpoint.java
+camel-core/src/test/java/org/apache/camel/queue/QueueRouteTest.java
+camel-jms/src/main/java/org/apache/camel/jms/JmsEndpoint.java
+camel-jms/src/test/java/org/apache/camel/jms/JmsRouteTest.java
+comments:
+The send() method in Endpoint made it look like a Processor, so why not let it be one.
+Some smaller cleanups
+
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520306 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-20T05:44:49Z
+class:
+camel-core/src/main/java/org/apache/camel/Exchange.java
+comments:
+tided up the javadocs
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520288 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-20T05:44:24Z
+class:
+camel-core/src/main/java/org/apache/camel/CamelContainer.java
+camel-core/src/main/java/org/apache/camel/Component.java
+camel-core/src/main/java/org/apache/camel/Endpoint.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultEndpoint.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultEndpointResolver.java
+camel-core/src/main/java/org/apache/camel/queue/QueueComponent.java
+camel-core/src/main/java/org/apache/camel/queue/QueueEndpoint.java
+camel-core/src/main/java/org/apache/camel/queue/QueueEndpointResolver.java
+camel-core/src/test/java/org/apache/camel/queue/QueueRouteTest.java
+camel-jms/src/main/java/org/apache/camel/jms/JmsComponent.java
+camel-jms/src/test/java/org/apache/camel/jms/JmsRouteTest.java
+comments:
+Got rid the the activate/deactivate methods on Component since they look better on Endpoint..
+but I did add similar methods to the Container.
+Also repliated the JmsRouteTest as a QueueRouteTest
+
+
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520287 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-20T04:01:39Z
+class:
+camel-core/src/main/java/org/apache/camel/Expression.java
+camel-core/src/main/java/org/apache/camel/Expressions.java
+camel-core/src/main/java/org/apache/camel/Predicates.java
+camel-core/src/main/java/org/apache/camel/builder/BuilderSupport.java
+camel-core/src/main/java/org/apache/camel/builder/DestinationBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/PredicateBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/RouteBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/ValueBuilder.java
+camel-core/src/main/java/org/apache/camel/util/ObjectHelper.java
+camel-core/src/test/java/org/apache/camel/RouteBuilderTest.java
+comments:
+added more predicates and a helper header() method to build easier and more powerful expressions and predicates
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520261 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-20T02:12:45Z
+class:
+camel-jms/src/main/java/org/apache/camel/jms/JmsComponent.java
+camel-jms/src/test/java/org/apache/camel/jms/JmsRouteTest.java
+comments:
+tidied up the DSL for JMS when using clientAcknowledge
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520220 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-20T02:03:18Z
+class:
+camel-jms/src/test/java/org/apache/camel/jms/JmsRouteTest.java
+comments:
+made test case actually fail if we don't receive the message from JMS after routing from one destination to another :)
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520215 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-20T02:00:05Z
+class:
+camel-core/src/main/java/org/apache/camel/CamelContainer.java
+camel-jms/src/main/java/org/apache/camel/jms/JmsComponent.java
+camel-jms/src/main/java/org/apache/camel/jms/JmsEndpoint.java
+camel-jms/src/test/java/org/apache/camel/jms/JmsRouteTest.java
+comments:
+test case working (though it doesn't actually test the message is received yet :)
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520213 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-20T01:15:57Z
+class:
+camel-core/src/main/java/org/apache/camel/CamelContainer.java
+camel-core/src/main/java/org/apache/camel/Component.java
+camel-core/src/main/java/org/apache/camel/Endpoint.java
+camel-core/src/main/java/org/apache/camel/RouteFactory.java
+camel-core/src/main/java/org/apache/camel/builder/RouteBuilder.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultEndpoint.java
+camel-core/src/main/java/org/apache/camel/queue/QueueComponent.java
+camel-core/src/main/java/org/apache/camel/queue/QueueEndpoint.java
+camel-jms/src/main/java/org/apache/camel/jms/Builder.java
+camel-jms/src/main/java/org/apache/camel/jms/JmsComponent.java
+camel-jms/src/main/java/org/apache/camel/jms/JmsEndpoint.java
+camel-jms/src/main/java/org/apache/camel/jms/JmsEndpointResolver.java
+camel-jms/src/test/java/org/apache/camel/jms/JmsRouteTest.java
+comments:
+added some helper methods to make it easy to configure the components using Java code
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520200 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-20T00:22:28Z
+class:
+camel-core/src/main/java/org/apache/camel/CamelContainer.java
+camel-core/src/main/java/org/apache/camel/queue/QueueComponent.java
+camel-core/src/main/java/org/apache/camel/queue/QueueEndpoint.java
+camel-core/src/test/java/org/apache/camel/RouteBuilderTest.java
+camel-xbean/src/test/java/org/apache/camel/xbean/XBeanRouteBuilderTest.java
+comments:
+Intial setup for future xbean integration.
+ - camel-core can now produce xbean annotated jars but does not directly depend on xbean
+ - add camel-xbean for camel extensions that depend on xbean.
+ - Hopefully one day we can also configure camel routes using xbean XML
+
+
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520195 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-19T23:19:06Z
+class:
+camel-core/src/test/java/org/apache/camel/RouteBuilderTest.java
+comments:
+Enhanced the example interceptor a little so it's more ilustrative.
+
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520164 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-19T23:13:35Z
+class:
+camel-core/src/main/java/org/apache/camel/InterceptorProcessor.java
+camel-core/src/main/java/org/apache/camel/builder/DestinationBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/InterceptorBuilder.java
+camel-core/src/test/java/org/apache/camel/RouteBuilderTest.java
+comments:
+Added an InterceptorProcessor and a builder for it. 
+
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520163 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-19T22:22:46Z
+class:
+camel-core/src/main/java/org/apache/camel/CamelContainer.java
+camel-core/src/main/java/org/apache/camel/Component.java
+camel-core/src/main/java/org/apache/camel/Endpoint.java
+camel-core/src/main/java/org/apache/camel/Exchange.java
+camel-core/src/main/java/org/apache/camel/InvalidHeaderTypeException.java
+camel-core/src/main/java/org/apache/camel/RuntimeCamelException.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultExchange.java
+camel-core/src/main/java/org/apache/camel/impl/ExchangeSupport.java
+camel-core/src/main/java/org/apache/camel/queue/QueueComponent.java
+camel-core/src/main/java/org/apache/camel/queue/QueueEndpoint.java
+camel-core/src/main/java/org/apache/camel/queue/QueueEndpointResolver.java
+camel-jms/src/main/java/org/apache/camel/jms/DefaultJmsExchange.java
+camel-jms/src/main/java/org/apache/camel/jms/JmsComponent.java
+camel-jms/src/main/java/org/apache/camel/jms/JmsEndpointResolver.java
+camel-jms/src/main/java/org/apache/camel/jms/JmsExchange.java
+camel-jms/src/main/java/org/apache/camel/jms/MessagePropertyAcessException.java
+camel-jms/src/main/java/org/apache/camel/jms/MessagePropertyNamesAcessException.java
+camel-jms/src/main/java/org/apache/camel/jms/RuntimeJmsException.java
+comments:
+Added the activate/deactivate lifecylce methods to the Component interface
+and did some other small cleanups
+
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520124 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-19T19:51:00Z
+class:
+camel-jms/src/main/java/org/apache/camel/jms/DefaultJmsExchange.java
+camel-jms/src/main/java/org/apache/camel/jms/JmsComponent.java
+camel-jms/src/main/java/org/apache/camel/jms/JmsEndpoint.java
+camel-jms/src/main/java/org/apache/camel/jms/JmsEndpointResolver.java
+camel-jms/src/main/java/org/apache/camel/jms/MessageListenerProcessor.java
+camel-jms/src/test/java/org/apache/camel/jms/JmsRouteTest.java
+comments:
+added a spike of a JMS component and endpoint for Camel
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520071 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-19T19:47:04Z
+class:
+camel-core/src/main/java/org/apache/camel/CamelContainer.java
+comments:
+removed compile error
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520069 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-19T19:40:01Z
+class:
+comments:
+Check in draft implementation of camel-jbi
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520062 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-19T19:26:26Z
+class:
+camel-core/src/main/java/org/apache/camel/Component.java
+comments:
+Lets add a component interface.. we can flesh it out later.
+
+
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520057 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-19T19:25:56Z
+class:
+camel-core/src/main/java/org/apache/camel/CamelContainer.java
+camel-core/src/main/java/org/apache/camel/EndpointResolver.java
+camel-core/src/main/java/org/apache/camel/builder/RouteBuilder.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultEndpointResolver.java
+camel-core/src/main/java/org/apache/camel/queue/QueueComponent.java
+camel-core/src/main/java/org/apache/camel/queue/QueueEndpointResolver.java
+camel-core/src/main/java/org/apache/camel/util/ObjectHelper.java
+comments:
+Got rid of the ugly singleton component and by lazily creating and registering it with the container.
+
+
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520054 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-19T19:21:16Z
+class:
+comments:
+updated
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520052 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-19T18:26:09Z
+class:
+camel-core/src/main/java/org/apache/camel/CamelContainer.java
+camel-core/src/main/java/org/apache/camel/queue/QueueComponent.java
+camel-core/src/main/java/org/apache/camel/queue/QueueEndpoint.java
+camel-core/src/main/java/org/apache/camel/queue/QueueEndpointResolver.java
+camel-core/src/test/java/org/apache/camel/RouteBuilderTest.java
+comments:
+renamed the seda component to queue
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@520036 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-19T16:30:21Z
+class:
+camel-core/src/main/java/org/apache/camel/CompositeProcessor.java
+camel-core/src/main/java/org/apache/camel/builder/DestinationBuilder.java
+camel-core/src/test/java/org/apache/camel/RouteBuilderTest.java
+comments:
+added a WireTap test case
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@519997 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-19T16:13:48Z
+class:
+camel-core/src/main/java/org/apache/camel/CamelContainer.java
+camel-core/src/main/java/org/apache/camel/EndpointResolver.java
+camel-core/src/main/java/org/apache/camel/builder/RouteBuilder.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultEndpointResolver.java
+camel-core/src/main/java/org/apache/camel/seda/SedaEndpointResolver.java
+camel-core/src/main/java/org/apache/camel/util/FactoryFinder.java
+camel-core/src/main/java/org/apache/camel/util/IntrospectionSupport.java
+camel-core/src/main/java/org/apache/camel/util/ObjectHelper.java
+comments:
+Updated DefaultEndpointResolver so that it uses a FactoryFinder to delegate to plugable EndpointResolver implementations
+
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@519989 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-19T15:35:28Z
+class:
+camel-core/src/main/java/org/apache/camel/CamelContainer.java
+camel-core/src/main/java/org/apache/camel/builder/RouteBuilder.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultEndpoint.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultEndpointResolver.java
+camel-core/src/main/java/org/apache/camel/seda/SedaEndpoint.java
+camel-jms/src/main/java/org/apache/camel/jms/JmsEndpoint.java
+comments:
+added a CamelContainer to act as the provider of the various polciies (resolvers, converters etc)
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@519973 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-19T15:04:13Z
+class:
+camel-core/src/test/java/org/apache/camel/RouteBuilderTest.java
+comments:
+updated the snippet macros some
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@519969 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-19T14:29:11Z
+class:
+camel-core/src/test/java/org/apache/camel/RouteBuilderTest.java
+comments:
+updated pom distro locations and added some snippet macros
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@519957 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-19T13:38:18Z
+class:
+camel-core/src/main/java/org/apache/camel/builder/ConfiguredDestinationBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/ConstantProcessorBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/DestinationBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/ProcessorBuilder.java
+camel-core/src/test/java/org/apache/camel/RouteBuilderTest.java
+comments:
+added the ability to add custom processors to the DSL
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@519943 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-19T13:20:25Z
+class:
+camel-jms/src/main/java/org/apache/camel/jms/DefaultJmsExchange.java
+comments:
+Added css for javadoc
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@519942 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-19T13:18:37Z
+class:
+camel-core/src/main/java/org/apache/camel/ChoiceProcessor.java
+camel-core/src/main/java/org/apache/camel/CompositeProcessor.java
+camel-core/src/main/java/org/apache/camel/Processors.java
+camel-core/src/main/java/org/apache/camel/SendProcessor.java
+camel-core/src/main/java/org/apache/camel/builder/ChoiceBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/ChoicePredicateBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/ConfiguredDestinationBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/DestinationBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/OldProcessorBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/PredicateBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/ProcessorBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/RouteBuilder.java
+camel-core/src/test/java/org/apache/camel/RouteBuilderTest.java
+comments:
+tidied up the code and added test case for ChoiceProcessor
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@519941 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-19T12:22:20Z
+class:
+camel-core/src/main/java/org/apache/camel/FilterProcessor.java
+camel-core/src/main/java/org/apache/camel/Predicates.java
+camel-core/src/main/java/org/apache/camel/builder/ConfiguredDestinationBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/DestinationBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/PredicateBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/ProcessorBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/RouteBuilder.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultEndpoint.java
+camel-core/src/main/java/org/apache/camel/util/ObjectHelper.java
+camel-core/src/test/java/org/apache/camel/RouteBuilderTest.java
+comments:
+improved the test case and fixed the predicate based routes
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@519925 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-19T11:00:33Z
+class:
+camel-core/src/main/java/org/apache/camel/Endpoint.java
+camel-core/src/main/java/org/apache/camel/EndpointResolver.java
+camel-core/src/main/java/org/apache/camel/Exchange.java
+camel-core/src/main/java/org/apache/camel/ExchangeConverter.java
+camel-core/src/main/java/org/apache/camel/FilterProcessor.java
+camel-core/src/main/java/org/apache/camel/InvalidHeaderTypeException.java
+camel-core/src/main/java/org/apache/camel/Predicate.java
+camel-core/src/main/java/org/apache/camel/Predicates.java
+camel-core/src/main/java/org/apache/camel/Processor.java
+camel-core/src/main/java/org/apache/camel/RuntimeCamelException.java
+camel-core/src/main/java/org/apache/camel/SendProcessor.java
+camel-core/src/main/java/org/apache/camel/builder/ChoiceBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/ChoicePredicateBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/ConfiguredDestinationBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/DestinationBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/OldProcessorBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/PredicateBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/ProcessorBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/RouteBuilder.java
+camel-core/src/main/java/org/apache/camel/builder/UndefinedDestinationException.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultEndpoint.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultEndpointResolver.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultExchange.java
+camel-core/src/main/java/org/apache/camel/impl/DefaultExchangeConverter.java
+camel-core/src/main/java/org/apache/camel/impl/ExchangeSupport.java
+camel-core/src/main/java/org/apache/camel/seda/SedaEndpoint.java
+camel-core/src/main/java/org/apache/camel/util/ObjectHelper.java
+camel-core/src/test/java/org/apache/camel/RouteBuilderTest.java
+camel-jms/src/main/java/org/apache/camel/jms/DefaultJmsExchange.java
+camel-jms/src/main/java/org/apache/camel/jms/JmsEndpoint.java
+camel-jms/src/main/java/org/apache/camel/jms/JmsExchange.java
+camel-jms/src/main/java/org/apache/camel/jms/MessagePropertyAcessException.java
+camel-jms/src/main/java/org/apache/camel/jms/MessagePropertyNamesAcessException.java
+camel-jms/src/main/java/org/apache/camel/jms/RuntimeJmsException.java
+comments:
+Moved the modules up out of the camel directory
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@519907 13f79535-47bb-0310-9956-ffa450edef68
+
+time:
+2007-03-19T10:54:57Z
+class:
+camel/camel-core/src/main/java/org/apache/camel/Endpoint.java
+camel/camel-core/src/main/java/org/apache/camel/EndpointResolver.java
+camel/camel-core/src/main/java/org/apache/camel/Exchange.java
+camel/camel-core/src/main/java/org/apache/camel/ExchangeConverter.java
+camel/camel-core/src/main/java/org/apache/camel/FilterProcessor.java
+camel/camel-core/src/main/java/org/apache/camel/InvalidHeaderTypeException.java
+camel/camel-core/src/main/java/org/apache/camel/Predicate.java
+camel/camel-core/src/main/java/org/apache/camel/Predicates.java
+camel/camel-core/src/main/java/org/apache/camel/Processor.java
+camel/camel-core/src/main/java/org/apache/camel/RuntimeCamelException.java
+camel/camel-core/src/main/java/org/apache/camel/SendProcessor.java
+camel/camel-core/src/main/java/org/apache/camel/builder/ChoiceBuilder.java
+camel/camel-core/src/main/java/org/apache/camel/builder/ChoicePredicateBuilder.java
+camel/camel-core/src/main/java/org/apache/camel/builder/ConfiguredDestinationBuilder.java
+camel/camel-core/src/main/java/org/apache/camel/builder/DestinationBuilder.java
+camel/camel-core/src/main/java/org/apache/camel/builder/OldProcessorBuilder.java
+camel/camel-core/src/main/java/org/apache/camel/builder/PredicateBuilder.java
+camel/camel-core/src/main/java/org/apache/camel/builder/ProcessorBuilder.java
+camel/camel-core/src/main/java/org/apache/camel/builder/RouteBuilder.java
+camel/camel-core/src/main/java/org/apache/camel/builder/UndefinedDestinationException.java
+camel/camel-core/src/main/java/org/apache/camel/impl/DefaultEndpoint.java
+camel/camel-core/src/main/java/org/apache/camel/impl/DefaultEndpointResolver.java
+camel/camel-core/src/main/java/org/apache/camel/impl/DefaultExchange.java
+camel/camel-core/src/main/java/org/apache/camel/impl/DefaultExchangeConverter.java
+camel/camel-core/src/main/java/org/apache/camel/impl/ExchangeSupport.java
+camel/camel-core/src/main/java/org/apache/camel/seda/SedaEndpoint.java
+camel/camel-core/src/main/java/org/apache/camel/util/ObjectHelper.java
+camel/camel-core/src/test/java/org/apache/camel/RouteBuilderTest.java
+camel/camel-jms/src/main/java/org/apache/camel/jms/DefaultJmsExchange.java
+camel/camel-jms/src/main/java/org/apache/camel/jms/JmsEndpoint.java
+camel/camel-jms/src/main/java/org/apache/camel/jms/JmsExchange.java
+camel/camel-jms/src/main/java/org/apache/camel/jms/MessagePropertyAcessException.java
+camel/camel-jms/src/main/java/org/apache/camel/jms/MessagePropertyNamesAcessException.java
+camel/camel-jms/src/main/java/org/apache/camel/jms/RuntimeJmsException.java
+comments:
+Initial checkin of Camel routing library
+
+git-svn-id: https://svn.apache.org/repos/asf/activemq/camel/trunk@519901 13f79535-47bb-0310-9956-ffa450edef68
+

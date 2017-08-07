@@ -1,0 +1,1230 @@
+﻿time:
+2014-02-06T16:15:55Z
+class:
+src/main/java/org/apache/lucene/queries/BlendedTermQuery.java
+src/main/java/org/elasticsearch/index/query/MultiMatchQueryBuilder.java
+src/main/java/org/elasticsearch/index/query/MultiMatchQueryParser.java
+src/main/java/org/elasticsearch/index/search/MatchQuery.java
+src/main/java/org/elasticsearch/index/search/MultiMatchQuery.java
+src/test/java/org/apache/lucene/queries/BlendedTermQueryTest.java
+src/test/java/org/elasticsearch/search/query/MultiMatchQueryTests.java
+comments:
+Added `cross_fields` mode to multi_match query
+
+`cross_fields` attemps to treat fields with the same analysis
+configuration as a single field and uses maximum score promotion or
+combination of the scores based depending on the `use_dis_max` setting.
+By default scores are combined. `cross_fields` can also search across
+fields of hetrogenous types for instance if numbers can be part of
+the query it makes sense to search also on numeric fields if an analyzer
+is provided in the reqeust.
+
+Relates to #2959
+
+time:
+2014-02-06T16:04:37Z
+class:
+comments:
+[DOCS] Make apt/yum repos more visible
+
+time:
+2014-02-06T15:35:49Z
+class:
+comments:
+[DOCS] Fix terms agg value script example
+
+time:
+2014-02-06T14:04:50Z
+class:
+comments:
+[Docs] value_count supports script per 1.1
+
+time:
+2014-02-06T13:34:07Z
+class:
+comments:
+[DOCS] Updated migration docs for multi_field to point to copy_to
+
+time:
+2014-02-06T13:19:17Z
+class:
+comments:
+[DOCS] Removed the experimental label from Tribe, Hot Threads
+and Completion Suggester
+
+time:
+2014-02-06T11:01:00Z
+class:
+src/main/java/org/elasticsearch/search/aggregations/bucket/histogram/DateHistogramParser.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/histogram/HistogramParser.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/range/RangeParser.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/range/date/DateRangeParser.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/range/ipv4/IpRangeParser.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/terms/TermsParser.java
+src/main/java/org/elasticsearch/search/aggregations/metrics/ValuesSourceMetricsAggregatorParser.java
+src/main/java/org/elasticsearch/search/aggregations/metrics/valuecount/ValueCountParser.java
+comments:
+Ignore case when parsing `script_values_sorted|unique` in aggregations.
+
+Close #5009
+
+time:
+2014-02-06T08:18:42Z
+class:
+comments:
+[DOCS] add azure and gce discovery plugins
+
+Clean EC2 disco doc
+Add Azure disco doc
+Add Google Compute Engine doc
+Fix Zen doc (add `enabled` in `multicast` parameters list) - Fix #5032.
+
+time:
+2014-02-06T08:08:58Z
+class:
+comments:
+Fix date for 2.0.0.RC1
+
+time:
+2014-02-05T22:34:29Z
+class:
+comments:
+prepare for next development iteration
+
+time:
+2014-02-05T22:31:59Z
+class:
+comments:
+prepare release elasticsearch-analysis-stempel-2.0.0.RC2
+
+time:
+2014-02-05T22:25:48Z
+class:
+comments:
+Add version in es-plugin.properties
+(cherry picked from commit e7f5897)
+
+time:
+2014-02-05T22:19:31Z
+class:
+src/main/java/org/elasticsearch/indices/analysis/pl/PolishIndicesAnalysis.java
+src/main/java/org/elasticsearch/indices/analysis/pl/StempelAnalyzerProviderFactory.java
+src/main/java/org/elasticsearch/indices/analysis/pl/StempelTokenFilterFactoryFactory.java
+comments:
+Can not upgrade stempel plugin from elasticsearch 0.90.5
+
+Due to fix [3790](https://github.com/elasticsearch/elasticsearch/issues/3790) in core, upgrading an analyzer provided as a plugin now fails.
+
+See https://github.com/elasticsearch/elasticsearch/issues/4936 for details.
+
+Issue is in elasticsearch core code but can be fixed in plugins by overloading `PreBuiltTokenFilterFactoryFactory` and `PreBuiltAnalyzerProviderFactory`.
+
+Closes #18.
+(cherry picked from commit fc68d81)
+
+time:
+2014-02-05T20:09:27Z
+class:
+comments:
+Update to Lucene 4.6.1 / Elasticsearch 1.0.0.RC2
+
+Closes #16.
+
+time:
+2014-02-05T19:44:12Z
+class:
+src/test/java/org/elasticsearch/index/analysis/SimplePolishIntegrationTests.java
+comments:
+Add integration test
+
+We want to make sure that the plugin starts correctly when a node starts.
+
+Closes #17.
+
+time:
+2014-02-05T16:53:37Z
+class:
+comments:
+Add S3 and HDFS repositories
+
+time:
+2014-02-05T13:47:48Z
+class:
+comments:
+[DOCS] Deprecated the path setting in favour of copy_to
+
+Relates to #4729
+
+time:
+2014-02-05T10:47:07Z
+class:
+src/main/java/org/elasticsearch/Version.java
+comments:
+Add Version.1_1_0 (missing in master but already in 1.x).
+
+time:
+2014-02-04T13:29:32Z
+class:
+src/main/java/org/elasticsearch/search/aggregations/metrics/valuecount/ValueCountBuilder.java
+src/main/java/org/elasticsearch/search/aggregations/metrics/valuecount/ValueCountParser.java
+src/test/java/org/elasticsearch/search/aggregations/metrics/ValueCountTests.java
+comments:
+Add script support to value_count aggregations.
+
+Close #5001
+
+time:
+2014-02-04T13:16:09Z
+class:
+src/main/java/org/elasticsearch/index/fielddata/FilterBytesValues.java
+src/main/java/org/elasticsearch/search/aggregations/support/FieldDataSource.java
+src/main/java/org/elasticsearch/search/aggregations/support/bytes/ScriptBytesValues.java
+src/test/java/org/elasticsearch/search/aggregations/support/FieldDataSourceTests.java
+comments:
+Fix hashCode values of aggregations' BytesValues.
+
+This commit removes FilterBytesValues which is very trappy as the default
+implementation forwards all method calls to the delegate. So if you do any
+non-trivial modification to the terms or to the order of the terms, you need
+to remember to override currentValueHash, copyShared, and this is very
+error-prone.
+
+FieldDataSource.WithScript.BytesValues and ScriptBytesValues now return correct
+hash codes, future bugs here would be catched by the new assertion in
+SortedUniqueBytesValues.
+
+This bug was causing performance issues with scripts as all terms were assumed
+to have the same hash code.
+
+Close #5004
+
+time:
+2014-02-04T12:05:49Z
+class:
+src/test/java/org/elasticsearch/test/rest/junit/RestTestSuiteRunner.java
+comments:
+[TEST] thrown error when there are no REST tests to run
+
+time:
+2014-02-04T10:54:32Z
+class:
+comments:
+[DOC] Tidied up geohashgrid aggregations
+
+time:
+2014-02-04T09:26:07Z
+class:
+comments:
+Does not support "script" in value_clunt aggregation.
+
+time:
+2014-02-04T08:39:55Z
+class:
+comments:
+Rename `geohashgrid` to `geohash_grid` in documentation.
+
+It was renamed in fc6bc4c4776a2f710f57616e3495aaf6a230c4d3.
+
+Close #4997
+
+time:
+2014-02-03T16:20:40Z
+class:
+comments:
+Fix confusing sentence
+
+The original sentence didn't make much sense. I hope this is a bit better. Taken heavy inspiration from https://github.com/elasticsearch/elasticsearch/commit/c63d8c4fb566882bd4655ddc7dec13b4e8719244
+
+time:
+2014-02-03T16:16:52Z
+class:
+comments:
+Improve Aggregations documentation
+
+* Mostly minor things like typos and grammar stuff
+* Some clarifications
+* The note on the deprecation was ambiguous. I've removed the problematic part so that it now definitely says it's deprecated
+
+time:
+2014-02-03T15:27:02Z
+class:
+src/main/java/org/elasticsearch/Version.java
+comments:
+Add [0.90.11] version as a constant
+
+time:
+2014-02-03T14:54:30Z
+class:
+comments:
+fix docs to reflect removal of byte buffer memory
+
+time:
+2014-02-03T14:52:19Z
+class:
+src/main/java/org/apache/lucene/store/bytebuffer/ByteBufferAllocator.java
+src/main/java/org/apache/lucene/store/bytebuffer/ByteBufferDirectory.java
+src/main/java/org/apache/lucene/store/bytebuffer/ByteBufferFile.java
+src/main/java/org/apache/lucene/store/bytebuffer/ByteBufferFileOutput.java
+src/main/java/org/apache/lucene/store/bytebuffer/ByteBufferIndexInput.java
+src/main/java/org/apache/lucene/store/bytebuffer/ByteBufferIndexOutput.java
+src/main/java/org/apache/lucene/store/bytebuffer/CachingByteBufferAllocator.java
+src/main/java/org/apache/lucene/store/bytebuffer/PlainByteBufferAllocator.java
+src/main/java/org/elasticsearch/cache/NodeCache.java
+src/main/java/org/elasticsearch/cache/NodeCacheModule.java
+src/main/java/org/elasticsearch/cache/memory/ByteBufferCache.java
+src/main/java/org/elasticsearch/index/store/IndexStoreModule.java
+src/main/java/org/elasticsearch/index/store/memory/ByteBufferDirectoryService.java
+src/main/java/org/elasticsearch/index/store/memory/ByteBufferIndexStore.java
+src/main/java/org/elasticsearch/index/store/memory/MemoryIndexStoreModule.java
+src/main/java/org/elasticsearch/index/store/ram/RamDirectoryService.java
+src/main/java/org/elasticsearch/node/internal/InternalNode.java
+src/test/java/org/elasticsearch/index/store/memory/SimpleByteBufferStoreTests.java
+src/test/java/org/elasticsearch/indices/store/SimpleDistributorTests.java
+src/test/java/org/elasticsearch/test/store/MockDirectoryHelper.java
+src/test/java/org/elasticsearch/test/store/MockRamDirectoryService.java
+comments:
+Remove the in memory buffer Lucene store/directory
+closes #4994
+
+time:
+2014-02-03T14:30:58Z
+class:
+src/test/java/org/elasticsearch/test/rest/junit/RestTestSuiteRunner.java
+comments:
+[TEST] added ability to filter REST test sections to run
+
+Added `tests.rest.section` parameter that allows to filter the test sections that get executed via regex (case insensitive)
+
+time:
+2014-02-03T14:30:58Z
+class:
+comments:
+[TEST] added missing put warmer body
+
+time:
+2014-02-03T14:30:58Z
+class:
+comments:
+[TEST] fixed typo s/mising/missing
+
+time:
+2014-02-03T12:04:33Z
+class:
+src/test/java/org/elasticsearch/search/query/MultiMatchQueryTests.java
+comments:
+Added dedicated test for MultiMatchQuery
+
+time:
+2014-02-03T11:51:31Z
+class:
+src/test/java/org/elasticsearch/index/query/SimpleIndexQueryParserTests.java
+comments:
+Added tests for match/multimatch queries with invalid “type” JSON param
+
+time:
+2014-02-03T10:26:38Z
+class:
+src/test/java/org/elasticsearch/test/hamcrest/RegexMatcher.java
+src/test/java/org/elasticsearch/test/rest/RestTestExecutionContext.java
+src/test/java/org/elasticsearch/test/rest/section/Assertion.java
+src/test/java/org/elasticsearch/test/rest/section/DoSection.java
+src/test/java/org/elasticsearch/test/rest/section/MatchAssertion.java
+src/test/java/org/elasticsearch/test/rest/support/Features.java
+comments:
+[TEST] Added ability to test apis that don't return json
+
+The last response body gets now always stashed in the REST tests and can be retrieved via `$body`. This implies that not only expected values can be retrieved from the stashed values, but actual values as well.
+
+Added support for regular expressions to `match` assertion, using `Pattern.COMMENTS` flag for better readability through new custom hamcrest matcher (adopted in do section as well). Functionality added through new feature called `regex` that needs to be mentioned in the skip sections whenever needed till all the runners support it.
+
+Added also example tests for cat count api
+
+time:
+2014-02-03T10:09:38Z
+class:
+src/main/java/org/elasticsearch/index/query/MatchQueryParser.java
+src/main/java/org/elasticsearch/index/query/MultiMatchQueryParser.java
+comments:
+Added exception if passed an invalid type param
+Closes #4964
+
+time:
+2014-02-03T09:05:35Z
+class:
+src/test/java/org/elasticsearch/test/rest/parser/RestTestSuiteParser.java
+comments:
+[TEST] Added check that yaml REST test suites always end with \n
+
+Our yaml parser seems to be too tolerant in some cases, e.g. it properly parses yaml suites when they don't end with a line feed, whereas other clients tests break due to that. We should try to do the same to keep consistency across runners.
+
+time:
+2014-02-02T08:23:12Z
+class:
+src/main/java/org/elasticsearch/index/search/child/ChildrenConstantScoreQuery.java
+src/main/java/org/elasticsearch/index/search/child/ChildrenQuery.java
+src/main/java/org/elasticsearch/index/search/child/DeleteByQueryWrappingFilter.java
+src/main/java/org/elasticsearch/index/search/child/ParentConstantScoreQuery.java
+src/main/java/org/elasticsearch/index/search/child/ParentQuery.java
+src/main/java/org/elasticsearch/index/search/child/TopChildrenQuery.java
+comments:
+Parent / child queries should work with non-default similarities
+
+time:
+2014-02-02T06:16:36Z
+class:
+src/main/java/org/elasticsearch/index/mapper/core/CompletionFieldMapper.java
+src/main/java/org/elasticsearch/index/mapper/geo/GeoPointFieldMapper.java
+src/test/java/org/elasticsearch/index/mapper/multifield/MultiFieldTests.java
+src/test/java/org/elasticsearch/index/mapper/multifield/MultiFieldsIntegrationTests.java
+comments:
+Added `fields` support to `geo_point` and `completion` field type.
+
+Upgrading 0.90.x `multi_field` type that has a `geo_point` or `completion` field type as default field would otherwise fail.
+Also it make sense to support these field types, because both support specifying the actual values as string.
+
+time:
+2014-01-31T20:43:20Z
+class:
+src/main/java/org/elasticsearch/index/percolator/stats/ShardPercolateService.java
+comments:
+Add RamUsageEstimator#sizeOf(Object) to forbidden APIs
+
+This method can be a performance trap since it traverse the
+entire object tree that is referenced by the provided object.
+See LUCENE-5373
+
+time:
+2014-01-31T20:16:38Z
+class:
+src/main/java/org/elasticsearch/search/suggest/completion/AnalyzingCompletionLookupProvider.java
+src/main/java/org/elasticsearch/search/suggest/completion/Completion090PostingsFormat.java
+src/test/java/org/elasticsearch/search/suggest/completion/AnalyzingCompletionLookupProviderV1.java
+comments:
+Prevent usage of object based RamUsageEstimator in Completion090PostingsFormat
+
+time:
+2014-01-31T20:16:38Z
+class:
+src/main/java/org/elasticsearch/search/suggest/completion/Completion090PostingsFormat.java
+comments:
+Don't load CompetionTerms if lookupFactory is null
+
+Closes #4970
+Closes #4788
+
+time:
+2014-01-31T19:34:01Z
+class:
+src/main/java/org/elasticsearch/index/mapper/ParseContext.java
+src/main/java/org/elasticsearch/index/mapper/core/AbstractFieldMapper.java
+src/main/java/org/elasticsearch/index/mapper/core/ByteFieldMapper.java
+src/main/java/org/elasticsearch/index/mapper/core/DateFieldMapper.java
+src/main/java/org/elasticsearch/index/mapper/core/DoubleFieldMapper.java
+src/main/java/org/elasticsearch/index/mapper/core/FloatFieldMapper.java
+src/main/java/org/elasticsearch/index/mapper/core/IntegerFieldMapper.java
+src/main/java/org/elasticsearch/index/mapper/core/LongFieldMapper.java
+src/main/java/org/elasticsearch/index/mapper/core/ShortFieldMapper.java
+src/main/java/org/elasticsearch/index/mapper/core/StringFieldMapper.java
+src/main/java/org/elasticsearch/index/mapper/core/TokenCountFieldMapper.java
+src/main/java/org/elasticsearch/index/mapper/core/TypeParsers.java
+src/main/java/org/elasticsearch/index/mapper/geo/GeoShapeFieldMapper.java
+src/main/java/org/elasticsearch/index/mapper/ip/IpFieldMapper.java
+src/test/java/org/elasticsearch/index/mapper/copyto/CopyToMapperTests.java
+comments:
+Remove support for boost in copy_to field
+
+Currently, boosting on `copy_to` is misleading and does not work as originally specified in #4520. Instead of boosting just the terms from the origin field, it boosts the whole destination field.  If two fields copy_to a third field, one with a boost of 2 and another with a boost of 3, all the terms in the third field end up with a boost of 6.  This was not the intention.
+
+  The alternative: to store the boost in a payload for every term, results in poor performance and inflexibility. Instead, users should either (1) query the common field AND the field that requires boosting, or (2) the multi_match query will soon be able to perform term-centric cross-field matching that will allow per-field boosting at query time (coming in 1.1).
+
+time:
+2014-01-31T17:47:23Z
+class:
+src/main/java/org/elasticsearch/action/admin/cluster/reroute/TransportClusterRerouteAction.java
+src/main/java/org/elasticsearch/cluster/node/DiscoveryNodeFilters.java
+src/main/java/org/elasticsearch/cluster/routing/allocation/AllocationService.java
+src/main/java/org/elasticsearch/cluster/routing/allocation/RoutingAllocation.java
+src/main/java/org/elasticsearch/cluster/routing/allocation/decider/AllocationDeciders.java
+src/main/java/org/elasticsearch/cluster/routing/allocation/decider/AwarenessAllocationDecider.java
+src/main/java/org/elasticsearch/cluster/routing/allocation/decider/ClusterRebalanceAllocationDecider.java
+src/main/java/org/elasticsearch/cluster/routing/allocation/decider/ConcurrentRebalanceAllocationDecider.java
+src/main/java/org/elasticsearch/cluster/routing/allocation/decider/DisableAllocationDecider.java
+src/main/java/org/elasticsearch/cluster/routing/allocation/decider/DiskThresholdDecider.java
+src/main/java/org/elasticsearch/cluster/routing/allocation/decider/EnableAllocationDecider.java
+src/main/java/org/elasticsearch/cluster/routing/allocation/decider/FilterAllocationDecider.java
+src/main/java/org/elasticsearch/cluster/routing/allocation/decider/NodeVersionAllocationDecider.java
+src/main/java/org/elasticsearch/cluster/routing/allocation/decider/RebalanceOnlyWhenActiveAllocationDecider.java
+src/main/java/org/elasticsearch/cluster/routing/allocation/decider/ReplicaAfterPrimaryActiveAllocationDecider.java
+src/main/java/org/elasticsearch/cluster/routing/allocation/decider/SameShardAllocationDecider.java
+src/main/java/org/elasticsearch/cluster/routing/allocation/decider/ShardsLimitAllocationDecider.java
+src/main/java/org/elasticsearch/cluster/routing/allocation/decider/SnapshotInProgressAllocationDecider.java
+src/main/java/org/elasticsearch/cluster/routing/allocation/decider/ThrottlingAllocationDecider.java
+comments:
+Add explanations for all AllocationDeciders
+
+Relates to #4380
+Relates to #2483
+
+time:
+2014-01-31T17:03:24Z
+class:
+src/test/java/org/elasticsearch/test/rest/support/Features.java
+comments:
+[TEST] clarified skip features usage
+
+time:
+2014-01-31T15:47:40Z
+class:
+src/test/java/org/elasticsearch/test/rest/junit/RestTestSuiteRunner.java
+src/test/java/org/elasticsearch/test/rest/parser/RestTestSectionParser.java
+src/test/java/org/elasticsearch/test/rest/parser/RestTestSuiteParser.java
+src/test/java/org/elasticsearch/test/rest/parser/SetupSectionParser.java
+src/test/java/org/elasticsearch/test/rest/parser/SkipSectionParser.java
+src/test/java/org/elasticsearch/test/rest/section/SkipSection.java
+src/test/java/org/elasticsearch/test/rest/support/Features.java
+src/test/java/org/elasticsearch/test/rest/test/SkipSectionParserTests.java
+comments:
+[TEST] Added ability to skip REST test suite/sections based on their required features
+
+As we have different runners for the REST tests we need a mechanism that allows us to add features to any of them without breaking all others builds.
+The idea is to name a feature and temporarily use skip sections that mention the required new features, so that runners that don't support it will skip the test.
+
+Added support for `features` field in skip section.
+Added `Features` class that contains a static list of the features supported by the runner. If a feature mentioned in a skip section is not listed here, the test will be skipped.
+
+time:
+2014-01-31T09:19:32Z
+class:
+src/test/java/org/elasticsearch/index/mapper/binary/BinaryMappingTests.java
+comments:
+Added missing licence header
+
+time:
+2014-01-31T09:15:51Z
+class:
+src/main/java/org/elasticsearch/index/mapper/core/BinaryFieldMapper.java
+src/test/java/org/elasticsearch/index/mapper/binary/BinaryMappingTests.java
+comments:
+The binary field shouldn't be stored by default, because it is already available in the _source.
+
+time:
+2014-01-31T09:12:32Z
+class:
+src/test/java/org/elasticsearch/benchmark/search/scroll/ScrollSearchBenchmark.java
+comments:
+Added benchmark for scroll searches.
+
+time:
+2014-01-30T20:32:52Z
+class:
+src/main/java/org/elasticsearch/index/query/FilteredQueryParser.java
+comments:
+filtered query parses _name incorrectly
+fixes #4960
+
+time:
+2014-01-30T19:42:31Z
+class:
+src/test/java/org/elasticsearch/flt/FuzzyLikeThisActionTests.java
+comments:
+Randomized number of shards / replicas & add mapping for numeric fields
+
+time:
+2014-01-30T18:16:53Z
+class:
+src/main/java/org/elasticsearch/action/admin/cluster/snapshots/create/CreateSnapshotRequest.java
+src/main/java/org/elasticsearch/action/admin/cluster/snapshots/restore/RestoreSnapshotRequest.java
+comments:
+Improve boolean handling in snapshot/restore request parsing
+
+Fixes #4949
+
+time:
+2014-01-30T14:51:33Z
+class:
+src/main/java/org/elasticsearch/index/mapper/core/DateFieldMapper.java
+src/main/java/org/elasticsearch/index/query/RangeFilterParser.java
+src/test/java/org/elasticsearch/index/query/IndexQueryParserFilterCachingTests.java
+src/test/java/org/elasticsearch/search/query/SimpleQueryTests.java
+comments:
+The forceful no cache behaviour for range filter with now date match expression should only be active if no rounding has been specified for `now` in the date range range expression (for example: `now/d`).
+
+Also the automatic now detection in range filters is overrideable by the `_cache` option.
+
+ Closes #4947
+ Relates to #4846
+
+time:
+2014-01-30T13:13:46Z
+class:
+src/main/java/org/elasticsearch/action/admin/cluster/node/info/PluginInfo.java
+src/main/java/org/elasticsearch/plugins/PluginsHelper.java
+src/main/java/org/elasticsearch/plugins/PluginsService.java
+src/test/java/org/elasticsearch/nodesinfo/SimpleNodesInfoTests.java
+comments:
+Add version to plugins
+
+Plugin developpers can now add a version number to their es-plugin.properties file:
+
+```properties
+plugin=org.elasticsearch.test.integration.nodesinfo.TestPlugin
+version=0.0.7-SNAPSHOT
+```
+
+Also, for site plugins, it's recommended to add a `es-plugin.properties` file in root site directory with `description` and `version` properties:
+
+```properties
+description=This is a description for a dummy test site plugin.
+version=0.0.7-BOND-SITE
+```
+
+When running Nodes Info API, you will get information on versions:
+
+```sh
+$ curl 'http://localhost:9200/_nodes?plugin=true&pretty'
+```
+
+```javascript
+{
+  "ok" : true,
+  "cluster_name" : "test-cluster-MacBook-Air-de-David.local",
+  "nodes" : {
+    "RHMsToxiRcCXwHiS6mEaFw" : {
+      "name" : "node2",
+      "transport_address" : "inet[/192.168.0.15:9301]",
+      "hostname" : "MacBook-Air-de-David.local",
+      "version" : "0.90.0.Beta2-SNAPSHOT",
+      "http_address" : "inet[/192.168.0.15:9201]",
+      "plugins" : [ {
+        "name" : "dummy",
+        "version" : "0.0.7-BOND-SITE",
+        "description" : "This is a description for a dummy test site plugin.",
+        "url" : "/_plugin/dummy/",
+        "site" : true,
+        "jvm" : false
+      } ]
+    },
+    "IKiUOo-LSCq1Km1GUhBwPg" : {
+      "name" : "node3",
+      "transport_address" : "inet[/192.168.0.15:9302]",
+      "hostname" : "MacBook-Air-de-David.local",
+      "version" : "0.90.0.Beta2-SNAPSHOT",
+      "http_address" : "inet[/192.168.0.15:9202]",
+      "plugins" : [ {
+        "name" : "test-plugin",
+        "version" : "0.0.7-SNAPSHOT",
+        "description" : "test-plugin description",
+        "site" : false,
+        "jvm" : true
+      } ]
+    },
+    "H64dcSF2R_GNWh6XRCYZJA" : {
+      "name" : "node1",
+      "transport_address" : "inet[/192.168.0.15:9300]",
+      "hostname" : "MacBook-Air-de-David.local",
+      "version" : "0.90.0.Beta2-SNAPSHOT",
+      "http_address" : "inet[/192.168.0.15:9200]",
+      "plugins" : [ ]
+    },
+    "mGEZcYl8Tye0Rm5AACBhPA" : {
+      "name" : "node4",
+      "transport_address" : "inet[/192.168.0.15:9303]",
+      "hostname" : "MacBook-Air-de-David.local",
+      "version" : "0.90.0.Beta2-SNAPSHOT",
+      "http_address" : "inet[/192.168.0.15:9203]",
+      "plugins" : [ {
+        "name" : "test-plugin",
+        "version" : "0.0.7-SNAPSHOT",
+        "description" : "test-plugin description",
+        "site" : false,
+        "jvm" : true
+      }, {
+        "name" : "test-no-version-plugin",
+        "version" : "NA",
+        "description" : "test-no-version-plugin description",
+        "site" : false,
+        "jvm" : true
+      }, {
+        "name" : "dummy",
+        "version" : "NA",
+        "description" : "No description found for dummy.",
+        "url" : "/_plugin/dummy/",
+        "site" : true,
+        "jvm" : false
+      } ]
+    }
+  }
+}
+```
+
+Relative to #2668.
+Closes #2784.
+
+time:
+2014-01-30T11:02:52Z
+class:
+src/main/java/org/elasticsearch/action/admin/indices/mapping/get/GetFieldMappingsResponse.java
+src/main/java/org/elasticsearch/rest/action/admin/indices/mapping/get/RestGetFieldMappingAction.java
+comments:
+REST Get Field Mapping API: Fix NPE if field not existent
+
+When fixing #4738, a small issue leaked into the implementation.
+The equals check in the RestAction only applied when the master node
+returned the rest request, otherwise the object equality would not hold
+due to being transferred over the wire and being deserialized into
+another object (from and an equality point of view) than the
+FieldMappingMetaData.NULL object - this could result in serialization
+exceptions as an empty length bytes reference is used in toXContent.
+
+time:
+2014-01-30T05:54:25Z
+class:
+src/main/java/org/elasticsearch/search/aggregations/bucket/terms/InternalOrder.java
+src/test/java/org/elasticsearch/search/aggregations/bucket/StringTermsTests.java
+comments:
+fixed a bug where when executing on a single shard and sorting terms agg based on sub metric agg, the order (asc/desc) is not respected
+ - fixed tests for terms order
+
+Closes #4951
+
+time:
+2014-01-30T05:29:05Z
+class:
+src/main/java/org/elasticsearch/action/delete/DeleteResponse.java
+comments:
+Fix javadocs for DeleteResponse.isFound()
+
+time:
+2014-01-29T19:55:26Z
+class:
+comments:
+fixed date_/histogram aggregation documentation - added documentation for the `min_doc_count` setting
+
+Closes #4944
+
+time:
+2014-01-29T15:33:59Z
+class:
+src/main/java/org/elasticsearch/index/snapshots/blobstore/BlobStoreIndexShardRepository.java
+src/main/java/org/elasticsearch/index/snapshots/blobstore/RateLimitingInputStream.java
+src/main/java/org/elasticsearch/repositories/Repository.java
+src/main/java/org/elasticsearch/repositories/blobstore/BlobStoreRepository.java
+src/test/java/org/elasticsearch/snapshots/SharedClusterSnapshotRestoreTests.java
+comments:
+Add throttling to snaphost and restore operations
+
+Closes #4855
+
+time:
+2014-01-29T13:43:36Z
+class:
+src/main/java/org/elasticsearch/rest/action/search/RestSearchScrollAction.java
+comments:
+scroll REST API should support source parameter
+
+As stated in documentation, we should support `?source=` parameter in `/_search/scroll` REST operations.
+
+This is how to reproduce it:
+
+```sh
+curl -XDELETE "http://localhost:9200/test"
+curl -XPOST "http://localhost:9200/test/type/1" -d'
+{
+    "foo": "bar"
+}'
+
+# This one works
+curl -XPOST "http://localhost:9200/_search/scroll" -d "FAKESCROLLID"
+
+# This one gives: {"error":"Failed to derive xcontent from org.elasticsearch.common.bytes.BytesArray@0"}
+curl -XGET "http://localhost:9200/_search/scroll/?source=FAKESCROLLID"
+```
+
+Closes #4941.
+
+time:
+2014-01-29T12:33:29Z
+class:
+comments:
+[TEST] Fixed whitespace in cluster.state/20_filtering.yaml
+
+time:
+2014-01-29T12:29:35Z
+class:
+src/test/java/org/elasticsearch/index/mapper/copyto/CopyToMapperIntegrationTests.java
+comments:
+Remove waiting for green in CopyToMapperIntegrationTests
+
+time:
+2014-01-29T12:25:06Z
+class:
+src/main/java/org/elasticsearch/rest/action/RestActionModule.java
+src/main/java/org/elasticsearch/rest/action/cat/RestThreadPoolAction.java
+comments:
+Added dedicated thread pool cat api, that can show all thread pool related statistic (size, rejected, queue etc.) for all thread pools (get, search, index etc.)
+By default active, rejected and queue thread statistics are included for the index, bulk and search thread pool.
+Other thread statistics of other thread pools can be included via the `h` query string parameter.
+
+Closes #4907
+
+time:
+2014-01-29T12:14:27Z
+class:
+src/test/java/org/elasticsearch/index/mapper/copyto/CopyToMapperIntegrationTests.java
+comments:
+Improve test stability
+
+time:
+2014-01-29T12:09:12Z
+class:
+comments:
+fixed nested example response in docs
+
+Closes #4935
+
+time:
+2014-01-29T11:10:17Z
+class:
+src/test/java/org/elasticsearch/search/suggest/CompletionSuggestSearchTests.java
+comments:
+Wait for green after indexing doc, so that the mapping update is always after the index operation on replica has completed. (replica shard may needed to catch up)
+
+time:
+2014-01-29T10:46:42Z
+class:
+comments:
+Update with 1.2.0 release
+
+time:
+2014-01-29T10:21:45Z
+class:
+src/main/java/org/elasticsearch/discovery/gce/GceUnicastHostsProvider.java
+comments:
+Update to GCE API 1.17.0-rc
+
+Seen in #9, Google changed its APIs. We need to update as it previous version causes a `404` error.
+
+Closes #12.
+Closes #9.
+
+time:
+2014-01-28T20:46:00Z
+class:
+src/main/java/org/elasticsearch/cloud/gce/GceComputeServiceImpl.java
+comments:
+Add more traces when failing
+
+time:
+2014-01-28T18:59:50Z
+class:
+comments:
+Updated URLs to include 1.x and 1.0 snapshots
+
+This file is used by elasticsearch client jerkin projects
+
+time:
+2014-01-28T17:15:27Z
+class:
+src/main/java/org/elasticsearch/rest/action/get/RestMultiGetAction.java
+src/main/java/org/elasticsearch/rest/action/percolate/RestMultiPercolateAction.java
+src/main/java/org/elasticsearch/rest/action/percolate/RestPercolateAction.java
+src/main/java/org/elasticsearch/rest/action/search/RestMultiSearchAction.java
+src/main/java/org/elasticsearch/rest/action/support/RestActions.java
+src/main/java/org/elasticsearch/rest/action/termvector/RestMultiTermVectorsAction.java
+comments:
+Fix potential NPE when no source and no body
+
+In recent changes, we added missing support for `source` parameter in some REST APIs:
+
+* #4892 : mget
+* #4900 : mpercolate
+* #4901 : msearch
+* #4902 : mtermvectors
+* #4903 : percolate
+
+```java
+        BytesReference content = null;
+        if (request.hasContent()) {
+            content = request.content();
+        } else {
+            String source = request.param("source");
+            if (source != null) {
+                content = new BytesArray(source);
+            }
+        }
+```
+
+It's definitely better to have:
+
+```java
+        BytesReference content = request.content();
+        if (!request.hasContent()) {
+            String source = request.param("source");
+            if (source != null) {
+                content = new BytesArray(source);
+            }
+        }
+```
+
+That said, it could be nice to have a single method to manage it for various REST actions.
+
+Closes #4924.
+
+time:
+2014-01-28T16:46:57Z
+class:
+src/main/java/org/elasticsearch/search/aggregations/bucket/histogram/InternalHistogram.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/range/InternalRange.java
+comments:
+Made all multi-bucket aggs return consistent response format
+
+Closes #4926
+
+time:
+2014-01-28T14:11:49Z
+class:
+src/test/java/org/elasticsearch/search/aggregations/bucket/GeoHashGridTests.java
+comments:
+Use #ensureSearchable() in GeoHashGridTests
+
+time:
+2014-01-28T13:23:42Z
+class:
+src/main/java/org/elasticsearch/monitor/jvm/HotThreads.java
+src/test/java/org/elasticsearch/action/admin/HotThreadsTest.java
+comments:
+Use num of actual threads if busiestThreads is larger
+
+We currently use the number of hot threads that we are
+interested in as the value for iterating over the actual
+hot threads which can lead to AIOOB is the actual number
+of threads is less than the given number.
+
+Closes #4927
+
+time:
+2014-01-28T13:12:51Z
+class:
+src/main/java/org/elasticsearch/search/aggregations/bucket/histogram/InternalHistogram.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/range/InternalRange.java
+comments:
+fixed compilation error on jdk7
+
+time:
+2014-01-28T12:32:34Z
+class:
+src/test/java/org/elasticsearch/index/engine/internal/InternalEngineIntegrationTest.java
+comments:
+Make test more reliable
+
+time:
+2014-01-28T12:28:04Z
+class:
+src/main/java/org/elasticsearch/search/aggregations/bucket/Bucket.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/InternalSingleBucketAggregation.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/MultiBucketsAggregation.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/SingleBucketAggregation.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/SingleBucketAggregator.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/filter/Filter.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/filter/InternalFilter.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/geogrid/GeoHashGrid.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/geogrid/GeoHashGridParser.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/geogrid/InternalGeoHashGrid.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/global/Global.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/global/InternalGlobal.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/histogram/AbstractHistogramBase.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/histogram/DateHistogram.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/histogram/DateHistogramBuilder.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/histogram/DateHistogramParser.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/histogram/Histogram.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/histogram/HistogramAggregator.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/histogram/HistogramBase.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/histogram/HistogramBuilder.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/histogram/HistogramParser.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/histogram/InternalDateHistogram.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/histogram/InternalHistogram.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/histogram/InternalOrder.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/missing/InternalMissing.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/missing/Missing.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/nested/InternalNested.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/nested/Nested.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/range/AbstractRangeBase.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/range/InternalRange.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/range/Range.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/range/RangeAggregator.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/range/RangeBase.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/range/date/DateRange.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/range/date/InternalDateRange.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/range/geodistance/GeoDistance.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/range/geodistance/GeoDistanceParser.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/range/geodistance/InternalGeoDistance.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/range/ipv4/IPv4Range.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/range/ipv4/IPv4RangeBuilder.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/range/ipv4/InternalIPv4Range.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/terms/DoubleTerms.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/terms/InternalOrder.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/terms/InternalTerms.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/terms/LongTerms.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/terms/StringTerms.java
+src/main/java/org/elasticsearch/search/aggregations/bucket/terms/Terms.java
+src/test/java/org/elasticsearch/index/mapper/copyto/CopyToMapperIntegrationTests.java
+src/test/java/org/elasticsearch/percolator/PercolatorFacetsAndAggregationsTests.java
+src/test/java/org/elasticsearch/search/aggregations/RandomTests.java
+src/test/java/org/elasticsearch/search/aggregations/bucket/DateHistogramTests.java
+src/test/java/org/elasticsearch/search/aggregations/bucket/DateRangeTests.java
+src/test/java/org/elasticsearch/search/aggregations/bucket/DoubleTermsTests.java
+src/test/java/org/elasticsearch/search/aggregations/bucket/FilterTests.java
+src/test/java/org/elasticsearch/search/aggregations/bucket/GeoDistanceTests.java
+src/test/java/org/elasticsearch/search/aggregations/bucket/GeoHashGridTests.java
+src/test/java/org/elasticsearch/search/aggregations/bucket/HistogramTests.java
+src/test/java/org/elasticsearch/search/aggregations/bucket/IPv4RangeTests.java
+src/test/java/org/elasticsearch/search/aggregations/bucket/LongTermsTests.java
+src/test/java/org/elasticsearch/search/aggregations/bucket/MinDocCountTests.java
+src/test/java/org/elasticsearch/search/aggregations/bucket/MissingTests.java
+src/test/java/org/elasticsearch/search/aggregations/bucket/NestedTests.java
+src/test/java/org/elasticsearch/search/aggregations/bucket/RangeTests.java
+src/test/java/org/elasticsearch/search/aggregations/bucket/ShardReduceTests.java
+src/test/java/org/elasticsearch/search/aggregations/bucket/ShardSizeTermsTests.java
+src/test/java/org/elasticsearch/search/aggregations/bucket/StringTermsTests.java
+src/test/java/org/elasticsearch/search/aggregations/metrics/AvgTests.java
+src/test/java/org/elasticsearch/search/aggregations/metrics/ExtendedStatsTests.java
+src/test/java/org/elasticsearch/search/aggregations/metrics/MaxTests.java
+src/test/java/org/elasticsearch/search/aggregations/metrics/MinTests.java
+src/test/java/org/elasticsearch/search/aggregations/metrics/StatsTests.java
+src/test/java/org/elasticsearch/search/aggregations/metrics/SumTests.java
+comments:
+cleanup of aggregations api
+- add javadocs
+- remove Iterable from all multi-bucket aggregations
+- all single-bucket aggregations should have getDocCount() and getAggregations()
+- all multi-bucket aggregations should have getBuckets() that returns Collection
+- every multi-bucket aggregation should have these methods:
+ - getBuckets() : Collection
+ - getBucketByKey(String) : Bucket
+ - getBucketByKey(Number) : Bucket (only for numeric buckets)
+ - getBucketByKey(DateTime) : Bucket (only for date buckets)
+ - getBucketByKey(GeoPoint) : Bucket (only for geohash_grid)
+- every bucket in all multi-bucket aggregations should have these methods:
+ - getKey() : String
+ - getKeyAsText() : Text
+ - getKeyAsNumber() : Number (if the key can be numeric value, eg. range & histograms)
+ - getKeyAsGeoPoint() : GeoPoint (in case of the geohash_grid agg)
+
+ Closes #4922
+
+time:
+2014-01-28T11:32:37Z
+class:
+src/main/java/org/elasticsearch/cluster/routing/allocation/decider/SameShardAllocationDecider.java
+comments:
+[DOCS] Clarified docs for cluster.routing.allocation.same_shard.host cluster setting
+
+Clarified also javadocs for SameShardAllocationDecider
+
+time:
+2014-01-28T10:19:57Z
+class:
+src/test/java/org/elasticsearch/percolator/PercolatorTests.java
+comments:
+Fixed failure for testDeletePercolatorType where the .percolator mapping hasn't propagated to master that was dynamically created via an index call, which made the delete mapping call fail.
+
+time:
+2014-01-28T10:11:41Z
+class:
+src/main/java/org/elasticsearch/monitor/jvm/JvmStats.java
+comments:
+Ignore internal errors if JVM can't find the memory pool
+
+time:
+2014-01-28T10:07:20Z
+class:
+comments:
+foreground mode is now the default, s/lets/let's/
+
+time:
+2014-01-28T09:35:39Z
+class:
+src/main/java/org/apache/lucene/search/vectorhighlight/CustomFieldQuery.java
+src/main/java/org/elasticsearch/index/engine/internal/InternalEngine.java
+src/test/java/org/elasticsearch/index/engine/internal/InternalEngineIntegrationTest.java
+comments:
+Upgrade to Lucene 4.6.1
+
+This upgrade includes a fix for RAM estimation on IndexReader
+that allows to expose the amount of used bytes per segment now
+as a setting in Elasticsearch. (LUCENE-5373)
+
+Additionally this bugfix release contained a small fix for highlighting
+that was already ported to Elasticsearch when reported (LUCENE-5361)
+
+Closes #4897
+
+time:
+2014-01-28T09:12:32Z
+class:
+src/main/java/org/elasticsearch/rest/action/termvector/RestMultiTermVectorsAction.java
+comments:
+Fix for #4902
+
+time:
+2014-01-28T09:11:00Z
+class:
+src/test/java/org/elasticsearch/benchmark/search/child/ChildSearchAndIndexingBenchmark.java
+src/test/java/org/elasticsearch/benchmark/search/child/ChildSearchBenchmark.java
+src/test/java/org/elasticsearch/benchmark/search/child/ParentChildIndexGenerator.java
+comments:
+Changed p/c benchmarks to use random generated parent ids, index parent and its children in a non deterministic order and let query values match with multiple child / parent documents.
+
+time:
+2014-01-28T08:43:28Z
+class:
+src/main/java/org/elasticsearch/rest/action/percolate/RestPercolateAction.java
+comments:
+percolate REST API should support source parameter
+
+As stated in documentation, we should support `?source=` parameter in percolate REST operations.
+
+This is how to reproduce it:
+
+```sh
+curl -XDELETE "http://localhost:9200/test"
+
+curl -XPUT "http://localhost:9200/test/.percolator/1" -d'
+{
+    "query" : {
+        "match" : {
+            "foo" : "bar"
+        }
+    }
+}'
+
+# This one works
+curl -XPOST "http://localhost:9200/test/message/_percolate" -d '{
+  "doc" : {
+    "foo" : "bar is in foo"
+  }
+}'
+
+# This one gives: BroadcastShardOperationFailedException[[test][2] ]; nested: PercolateException[failed to percolate]; nested: ElasticsearchIllegalArgumentException[Nothing to percolate];
+curl -XGET "http://localhost:9200/test/message/_percolate?source=%7B%22doc%22%3A%7B%22foo%22%3A%22bar%20is%20in%20foo%22%7D%7D"
+```
+
+Closes #4903.
+
+time:
+2014-01-28T08:40:35Z
+class:
+src/main/java/org/elasticsearch/rest/action/termvector/RestMultiTermVectorsAction.java
+comments:
+mtermvectors REST API should support source parameter
+
+As stated in documentation, we should support `?source=` parameter in msearch REST operations.
+
+This is how to reproduce it:
+
+```sh
+curl -XDELETE "http://localhost:9200/test"
+
+curl -XPOST "http://localhost:9200/test/type/1?refresh" -d'{
+    "foo": "bar"
+}'
+
+# This one works
+curl -XPOST "http://localhost:9200/test/type/_mtermvectors" -d'
+{
+    "ids" : ["1"]
+}'
+
+# This one gives: "ActionRequestValidationException[Validation Failed: 1: multi term vectors: no documents requested;]"
+curl -XGET "http://localhost:9200/test/type/_mtermvectors?source=%7B%22ids%22%3A%5B%221%22%5D%7D"
+```
+
+Closes #4902.
+
+time:
+2014-01-28T08:39:44Z
+class:
+src/main/java/org/elasticsearch/rest/action/search/RestMultiSearchAction.java
+comments:
+msearch REST API should support source parameter
+
+As stated in documentation, we should support `?source=` parameter in msearch REST operations.
+
+This is how to reproduce it:
+
+```sh
+curl -XDELETE "http://localhost:9200/test"
+
+curl -XPOST "http://localhost:9200/test/type/1?refresh" -d'{
+    "foo": "bar"
+}'
+
+cat requests
+{}
+{"query" : {"match_all" : {}}}
+
+# This one works
+curl -XGET localhost:9200/_msearch --data-binary @requests
+
+# This one gives: {"error":"Failed to derive xcontent from org.elasticsearch.common.bytes.BytesArray@0"}
+curl -XGET "http://localhost:9200/test/type/_mget?source=%7B%7D%0A%7B%22query%22%3A%7B%22match_all%22%3A%7B%7D%7D%7D%0A"
+```
+
+Closes #4901.
+
+time:
+2014-01-28T08:38:30Z
+class:
+src/main/java/org/elasticsearch/rest/action/percolate/RestMultiPercolateAction.java
+comments:
+mpercolate REST API should support source parameter
+
+As stated in documentation, we should support `?source=` parameter in mpercolate REST operations.
+
+This is how to reproduce it:
+
+```sh
+curl -XDELETE "http://localhost:9200/test"
+
+curl -XPUT "http://localhost:9200/test/.percolator/1" -d'
+{
+    "query" : {
+        "match" : {
+            "foo" : "bar"
+        }
+    }
+}'
+
+# This one works
+curl -XPOST "http://localhost:9200/test/message/_mpercolate" -d '
+{"percolate" : {}}
+{"doc" : {"foo" : "bar is in foo"}}
+'
+
+# This one gives: BroadcastShardOperationFailedException[[test][2] ]; nested: PercolateException[failed to percolate]; nested: ElasticsearchIllegalArgumentException[Nothing to percolate];
+curl -XGET "http://localhost:9200/test/message/_mpercolate?source=%7B%22percolate%22%3A%7B%7D%7D%0A%7B%22doc%22%3A%7B%22foo%22%3A%22bar is in foo%22%7D%7D%0A"
+```
+
+Closes #4900.
+
+time:
+2014-01-28T07:12:53Z
+class:
+src/main/java/org/elasticsearch/action/admin/indices/mapping/get/GetFieldMappingsResponse.java
+src/main/java/org/elasticsearch/action/admin/indices/mapping/get/TransportGetFieldMappingsAction.java
+src/main/java/org/elasticsearch/rest/action/admin/indices/mapping/get/RestGetFieldMappingAction.java
+comments:
+REST API: Consistent get field mapping response
+
+If a get field mapping request is issued, and all but the field can be
+found, the response should return an empty JSON object instead of a 404.
+
+Closes #4738
+
+time:
+2014-01-27T17:05:19Z
+class:
+src/test/java/org/elasticsearch/index/mapper/geo/GeoEncodingTests.java
+comments:
+Changed GeoEncodingTests to ensure accuracy always >1mm due to rounding errors with very small numbers
+
